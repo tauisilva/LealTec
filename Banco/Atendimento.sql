@@ -31,14 +31,21 @@ create table if not exists Caixa(
 	foreign key(FlCaixa) references Fl_Caixa(id_FlCaixa)
 )default charset = utf8 engine = InnoDB;
 
+create table if not exists Marca(
+	id_marca int unsigned not null auto_increment primary key,
+    marca varchar(50) not null
+)default charset = utf8 engine = InnoDB;
+
 create table if not exists Computador(
 	id_Comp int unsigned not null auto_increment primary key,
+    marca int unsigned not null,
 	teclado varchar(250),
 	nome varchar(250) not null,
 	processador varchar(100) not null,
 	ram varchar(80) not null,
 	hd varchar(150) not null,
-	so varchar(250) not null
+	so varchar(250) not null,
+    foreign key (marca) references Marca(id_marca)
 )default charset = utf8 engine = InnoDb;
 
 create table if not exists Desktop(
@@ -56,9 +63,11 @@ create table if not exists Notebook(
 
 create table if not exists Mobile(
 	id_Mobil int unsigned not null auto_increment primary key,
-	nome varchar(250) not null,
+	marca int unsigned not null,
+    nome varchar(250) not null,
 	carregador varchar(100) not null,
-	tela varchar(100)
+	tela varchar(100),
+    foreign key(marca) references Marca(id_marca)
 )default charset = utf8 engine = InnoDB;
 
 create table if not exists Celular(
@@ -160,3 +169,32 @@ create table if not exists OrdemServico(
 	foreign key(computador) references Computador(id_comp),
 	foreign key(pessoa) references Pessoa(id_Pessoa)
 )default charset = utf8 engine = InnoDB;
+
+insert into Marca
+values (default,'Acer'),
+(default,'Apple'),
+(default,'Alcatel'),
+(default,'Asus'),
+(default,'Blu'),
+(default,'CCE'),
+(default,'Dell'),
+(default,'Gigabyte'),
+(default,'HP'),
+(default,'HTC'),
+(default,'Huewai'),
+(default,'Lenovo'),
+(default,'LG'),
+(default,'Microsoft'),
+(default,'Motorola'),
+(default,'Multilaser'),
+(default,'Nokia'),
+(default,'OnePlus'),
+(default,'Positivo'),
+(default,'Philco'),
+(default,'Quantum'),
+(default,'Samsung'),
+(default,'Sony'),
+(default,'Win'),
+(default,'Xiaomi'),
+(default,'ZTE'),
+(default,'Outros');
