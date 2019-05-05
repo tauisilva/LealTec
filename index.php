@@ -41,11 +41,6 @@
     </li>
 </ul>
 <ul class="navbar-nav ml-auto nav-flex-icons">
-  <li class="nav-item">
-    <a class="nav-link waves-effect waves-light">1
-      <i class="fas fa-envelope"></i>
-    </a>
-  </li>
   <li class="nav-item avatar dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="modal" data-target="#modalLogin" aria-haspopud="true" aria-expanded="false" id="user">
       <img src="img/ex.jpg" class="rounded-circle z-depth-0"
