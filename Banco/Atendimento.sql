@@ -1,10 +1,10 @@
-drop database if exists Atendimento;
+drop database if exists LealTec;
 
-create database if not exists Atendimento
+create database if not exists LealTec
 default collate utf8_general_ci
 default character set utf8;
 
-use Atendimento;
+use LealTec;
 
 create table if not exists Tipo_Pag(
 	id_Tipo int unsigned not null auto_increment primary key,

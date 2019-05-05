@@ -1,15 +1,7 @@
 <?php
-	//conexão com o banco de dados
-$host = "localhost";
-$user = "root";
-$pass = "root";
-$db   = "";
 
-@$conn = new mysqli($host,$user,$pass,$db) or die($conn->error);
-
-	//inclusão de páginas
+//inclusão de páginas
 switch (@$_REQUEST["page"]) {
-		//advogado		
 	case 'cad-advogado':
 	include("advogado/cadastrar-advogado.php");
 	break;
