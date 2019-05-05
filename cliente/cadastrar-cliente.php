@@ -6,8 +6,8 @@
 
 </style>
 <div class="container-fluid">
-<h1>Cadastrar Cliente</h1>
-<br>
+	<h1>Cadastrar Cliente</h1>
+	<br>
 	<form action="index.php?page=sal-cliente" method="POST" id="form1">
 		<input type="hidden" name="acao" value="cadastrar">
 		<div class="form-row">
@@ -51,40 +51,40 @@
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-6">
-			<label for="cidade">Cidade</label>
-			<input type="text" class="form-control" style="border-radius: 15px" id="cidade" maxlength="40" name="cidade" placeholder="Ex: Brasília">
+				<label for="cidade">Cidade</label>
+				<input type="text" class="form-control" style="border-radius: 15px" id="cidade" maxlength="40" name="cidade" placeholder="Ex: Brasília">
 			</div>
 			<div class="form-group col-md-6">
-			<label for="estado" >Estado</label>
-			<select id="estado" name="estado" class="form-control" style="border-radius: 15px">
-				<option value="AC">Acre</option>
-				<option value="AL">Alagoas</option>
-				<option value="AP">Amapá</option>
-				<option value="AM">Amazonas</option>
-				<option value="BA">Bahia</option>
-				<option value="CE">Ceará</option>
-				<option value="DF" selected>Distrito Federal</option>
-				<option value="ES">Espírito Santo</option>
-				<option value="GO">Goiás</option>
-				<option value="MA">Maranhão</option>
-				<option value="MT">Mato Grosso</option>
-				<option value="MS">Mato Grosso do Sul</option>
-				<option value="MG">Minas Gerais</option>
-				<option value="PA">Pará</option>
-				<option value="PB">Paraíba</option>
-				<option value="PR">Paraná</option>
-				<option value="PE">Pernambuco</option>
-				<option value="PI">Piauí</option>
-				<option value="RJ">Rio de Janeiro</option>
-				<option value="RN">Rio Grande do Norte</option>
-				<option value="RS">Rio Grande do Sul</option>
-				<option value="RO">Rondônia</option>
-				<option value="RR">Roraima</option>
-				<option value="SC">Santa Catarina</option>
-				<option value="SP">São Paulo</option>
-				<option value="SE">Sergipe</option>
-				<option value="TO">Tocantins</option>
-			</select>
+				<label for="estado" >Estado</label>
+				<select id="estado" name="estado" class="form-control" style="border-radius: 15px">
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AP">Amapá</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA">Bahia</option>
+					<option value="CE">Ceará</option>
+					<option value="DF" selected>Distrito Federal</option>
+					<option value="ES">Espírito Santo</option>
+					<option value="GO">Goiás</option>
+					<option value="MA">Maranhão</option>
+					<option value="MT">Mato Grosso</option>
+					<option value="MS">Mato Grosso do Sul</option>
+					<option value="MG">Minas Gerais</option>
+					<option value="PA">Pará</option>
+					<option value="PB">Paraíba</option>
+					<option value="PR">Paraná</option>
+					<option value="PE">Pernambuco</option>
+					<option value="PI">Piauí</option>
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="RN">Rio Grande do Norte</option>
+					<option value="RS">Rio Grande do Sul</option>
+					<option value="RO">Rondônia</option>
+					<option value="RR">Roraima</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="SP">São Paulo</option>
+					<option value="SE">Sergipe</option>
+					<option value="TO">Tocantins</option>
+				</select>
 			</div>
 		</div>
 		<div class="form-row">
@@ -105,8 +105,8 @@
 					<option value="tablet">Tablet</option>
 				</select>
 			</div>
-			</div>
-			<div class="form-row">
+		</div>
+		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for="aparelho">Marca</label>
 				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 15px">
@@ -145,12 +145,12 @@
 					<input type="text" class="form-control" id="modleo" maxlength="40" name="modelo" style="border-radius: 15px" required placeholder="Ex:XT-1033">
 				</div>
 			</div>
-			</div>
-			<div class="form-group">
-			    <label for="descricao">Descrição</label>
-			    <textarea class="form-control" style="border-radius: 15px" id="descricao" rows="3" name="descricao" required placeholder="Digite aqui a descrição do aparelho e o problema a ser solucionado"></textarea>
-			</div>
 		</div>
-		<button type="submit" style="border-radius: 15px" class="btn blue-gradient">Cadastrar</button>
-	</form>
+		<div class="form-group">
+			<label for="descricao">Descrição</label>
+			<textarea class="form-control" style="border-radius: 15px" id="descricao" rows="3" name="descricao" required placeholder="Digite aqui a descrição do aparelho e o problema a ser solucionado"></textarea>
+		</div>
+	</div>
+	<button type="submit" style="border-radius: 15px" class="btn blue-gradient">Cadastrar</button>
+</form>
 </div>
