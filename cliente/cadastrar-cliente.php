@@ -1,6 +1,6 @@
 <?php
 
-	include("conexao.class.php");
+	include_once("conexao.class.php");
 
 	$strSql = "SELECT * from marca order by marca asc;";
 
