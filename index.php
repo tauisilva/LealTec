@@ -235,7 +235,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <?php include("config.php"); ?>
+      <?php include("direciona.php"); ?>
     </div>
   </div>
 </div>
