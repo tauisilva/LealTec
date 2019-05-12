@@ -1,6 +1,6 @@
 <?php
 
-	include("conexao.class.php");
+	include_once("conexao.class.php");
 
 	try {
 		
@@ -128,7 +128,7 @@
 			<div class="form-group col-md-6">
 				<label for="aparelho">Marca</label>
 				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 15px">
-					<option value=""></option>
+					<option value="">...</option>
 					<?php while($row = $res->fetch_assoc()): ?>
 						<option value=<?= $row['id_marca'] ?>><?= $row['marca'] ?></option>
 					<?php endwhile; ?>	
