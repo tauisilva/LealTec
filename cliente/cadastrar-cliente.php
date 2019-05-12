@@ -6,15 +6,14 @@
 		
 		$conn = new Conexao();
 
+		$sql = "SELECT * from Marca";
+		$res = $conn->Consultas($sql);
+		
 	} catch (Exception $e) {
 		
 		die(print $e->getMenssagem());
 
 	}
-
-	$sql = "SELECT * from Marca";
-
-	$res = $conn->Consultas($sql);
 
 ?>
 <style type="text/css">
