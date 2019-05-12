@@ -1,3 +1,22 @@
+<?php
+
+	include("conexao.class.php");
+
+	try {
+		
+		$conn = new Conexao();
+
+	} catch (Exception $e) {
+		
+		die(print $e->getMenssagem());
+
+	}
+
+	$sql = "SELECT * from Marca";
+
+	$res = $conn->Consultas($sql);
+
+?>
 <style type="text/css">
 	.container{
 		background-image: linear-gradient(60deg, #FFF 0%, #2b76b9 37%, #35eb93 65%, #2cacd1 100%);
@@ -110,33 +129,10 @@
 			<div class="form-group col-md-6">
 				<label for="aparelho">Marca</label>
 				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 15px">
-					<option value="acer">Acer</option>
-					<option value="apple">Apple</option>
-					<option value="alcatel">Alcatel</option>
-					<option value="asus">Asus</option>
-					<option value="blu">Blu</option>
-					<option value="cce">CCE</option>
-					<option value="dell">Dell</option>
-					<option value="gigabyte">Gigabyte</option>
-					<option value="hp">HP</option>
-					<option value="htc">HTC</option>
-					<option value="huawei">Huewai</option>
-					<option value="lenovo">Lenovo</option>
-					<option value="lg">LG</option>
-					<option value="microsoft">Microsoft</option>
-					<option value="motorola">Motorola</option>
-					<option value="multilaser">Multilaser</option>
-					<option value="nokia">Nokia</option>
-					<option value="oneplus">OnePlus</option>
-					<option value="positivo">Positivo</option>
-					<option value="philco">Philco</option>
-					<option value="quantum">Quantum</option>
-					<option value="samsung">Samsung</option>
-					<option value="sony">Sony</option>
-					<option value="win">Win</option>
-					<option value="xiaomi">Xiaomi</option>
-					<option value="zte">ZTE</option>
-					<option value="outros">Outros</option>
+					<option value=""></option>
+					<?php while($row = $res->fetch_assoc()): ?>
+						<option value=<?= $row['id_marca'] ?>><?= $row['marca'] ?></option>
+					<?php endwhile; ?>	
 				</select>
 			</div>
 			<div class="form-group col-md-6">
