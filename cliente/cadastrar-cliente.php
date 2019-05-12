@@ -6,9 +6,9 @@
 		
 		$conn = new Conexao();
 
-		$sql = "SELECT * from Marca";
+		$sql = "SELECT * from Marca order by marca asc";
 		$res = $conn->Consultas($sql);
-		
+
 	} catch (Exception $e) {
 		
 		die(print $e->getMenssagem());
