@@ -1,20 +1,20 @@
 <?php
 
 switch (@$_REQUEST["page"]) {	
-	case 'cad-advogado':
-		include("advogado/cadastrar-advogado.php");
+	case 'cad-servicos':
+		include("");
 		break;
 
-	case 'edi-advogado':
-		include("advogado/editar-advogado.php");
+	case 'edi-servicos':
+		include("servicos/editar-servicos.php");
 		break;
 
-	case 'lis-advogado':
-		include("advogado/listar-advogado.php");
+	case 'lis-servicos':
+		include("servicos/listar-servicos.php");
 		break;
 
-	case 'sal-advogado':
-		include("advogado/salvar-advogado.php");
+	case 'sal-servicos':
+		include("servicos/salvar-servicos.php");
 		break;
 			
 	case 'cad-cliente':
