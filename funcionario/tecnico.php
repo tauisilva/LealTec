@@ -1,7 +1,7 @@
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="icon" type="image/png" href="img/favicon-32x32.png" />
   <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/mdb.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 <!-- Modal Tecnico  -->
     <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLogin" aria-hidden="true" >
@@ -45,7 +45,7 @@
       <!--/.Content-->
     </div>
   </div>
-  <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.0.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/mdb.js"></script>

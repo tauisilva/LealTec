@@ -34,9 +34,9 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Welcome To Our Studio!</div>
-        <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-secundary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+        <div class="intro-lead-in">Bem Vindo Ao Seu Ambiente de Trabalho!</div>
+        <div class="intro-heading text-uppercase">Tenha um Bom Serviço</div>
+        <a class="btn btn-secundary btn-xl text-uppercase js-scroll-trigger white-text" style="border-radius: 20px;" href="#services">Vamos lá!</a>
       </div>
     </div>
   </header>
@@ -46,39 +46,36 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Services</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Serviços</h2>
+          <h3 class="section-subheading text-muted">Aqui é aonde você vai fazer tudo que for preciso envolvendo seus serviços.</h3>
         </div>
       </div>
       <div class="row text-center">
         <div class="col-md-4">
-          <span class="fa-stack fa-4x">
+          <span class="fa-stack fa-4x" data-toggle="modal" data-target="#modalServicos">
             <i class="fas fa-circle fa-stack-2x text-blue"></i>
             <i class="fas fa-mobile-alt fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Mobiles</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <p class="text-muted">Cadastre e Edite seu serviços envolvendo aparelhos mobiles, sendo eles tanto Tabletes quanto Smartphones.</p>
         </div>
         <div class="col-md-4">
-          <span class="fa-stack fa-4x">
+          <span class="fa-stack fa-4x" data-toggle="modal" data-target="#modalServicos">
             <i class="fas fa-circle fa-stack-2x text-secundary"></i>
             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Desktops</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <p class="text-muted">Cadastre e Edite seu serviços envolvendo aparelhos Desktop, sendo eles tanto Pc's quanto Notebooks</p>
         </div>
         <div class="col-md-4">
-          <span class="fa-stack fa-4x">
+          <span class="fa-stack fa-4x" data-toggle="modal" data-target="#modalServicos">
             <i class="fas fa-circle fa-stack-2x text-secundary"></i>
             <i class="fas fa-microchip fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Outros</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <p class="text-muted">Aqui é aonde vc tratara de todos os outros tipos de serviços que não se encaixam nas outras categorias</p>
         </div>
       </div>
-      <div class="text-center form-sm mt-2">
-                <button class="btn blue-gradient btn-rounded white-text" data-toggle="modal" data-target="#modalServicos" style="border-radius: 20px">Sign up <i class="fas fa-sign-in ml-1"></i></button>
-              </div>
     </div>
   </section>
 
@@ -190,10 +187,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/jack.jpg" alt="">
-            <h4>Kay Garland</h4>
+            <img class="mx-auto rounded-circle" src="img/team/jackson.jpg" alt="">
+            <h4>Jackson Mendes</h4>
             <p class="text-muted">Lead Designer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
@@ -214,10 +211,10 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
+            <img class="mx-auto rounded-circle" src="img/team/railson.jpg" alt="">
+            <h4>Railson</h4>
             <p class="text-muted">Lead Marketer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
@@ -238,10 +235,10 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
           <div class="team-member">
             <img class="mx-auto rounded-circle" src="img/team/noel.jpg" alt="">
-            <h4>Diana Pertersen</h4>
+            <h4>Noel Magalhões</h4>
             <p class="text-muted">Lead Developer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
@@ -256,6 +253,30 @@
               </li>
               <li class="list-inline-item">
                 <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="team-member">
+            <img class="mx-auto rounded-circle" src="img/team/taui.jpg" alt="">
+            <h4>Taui Silva</h4>
+            <p class="text-muted">Front-End Developer</p>
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://github.com/tauisilva">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.facebook.com/tauis1">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/taui-silva-749b8016b">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
