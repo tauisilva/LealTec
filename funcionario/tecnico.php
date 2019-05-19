@@ -3,48 +3,69 @@
   <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="css/mdb.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-<!-- Modal Tecnico  -->
-    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLogin" aria-hidden="true" >
-    <div class="modal-dialog" role="document">
-      <!--Content-->
-      <div class="modal-content form-elegant" style="border-radius: 20px;" >
+
+<!-- Modal Tecnico  --> 
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLogin"
+  aria-hidden="true" >
+  <div class="modal-dialog form-dark" role="document">
+    <!--Content-->
+    <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 20px;">
+      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 20px;">
         <!--Header-->
-        <div class="modal-header text-center"style="background-image: linear-gradient(to right, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%); border-top-right-radius:  20px; border-top-left-radius: 20px;">
-          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLogin"><strong>Login</strong></h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-header text-center pb-4">
+          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLogin"><strong>SIGN</strong> <a
+              class="green-text font-weight-bold"><strong> UP</strong></a></h3>
+          <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <!--Body-->
-        <div class="modal-body mx-4">
+        <div class="modal-body">
           <!--Body-->
-          <div class="md-form mb-5" style="border-radius: 20px;">
-            <input type="email" id="Form-email1" class="form-control validate">
-            <label data-error="wrong" data-success="right" for="Form-email1">Email</label>
+          <div class="md-form mb-5">
+            <input type="email" id="Form-email5" class="form-control validate white-text">
+            <label data-error="wrong" data-success="right" for="Form-email5">Your email</label>
           </div>
 
           <div class="md-form pb-3">
-            <input type="password" id="Form-pass1" class="form-control validate">
-            <label data-error="wrong" data-success="right" for="Form-pass1">Senha</label>
-            <p class="font-small blue-text d-flex justify-content-end">Esqueceu a   <a href="#" class="blue-text ml-1">
-            senha?</a></p>
+            <input type="password" id="Form-pass5" class="form-control validate white-text">
+            <label data-error="wrong" data-success="right" for="Form-pass5">Your password</label>
           </div>
 
-          <div class="text-center mb-3">
-            <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a white-text" style="border-radius: 20px">Login</button>
+          <!--Grid row-->
+          <div class="row d-flex align-items-center mb-4">
+
+            <!--Grid column-->
+            <div class="text-center mb-3 col-md-12" >
+              <a ></a>
+              <button type="button" class=" btn btn-success btn-block z-depth-1" style="border-radius: 20px;">Sign up</button>
+            </div>
+            <!--Grid column-->
+
           </div>
-          <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in
-          with:</p>
-        </div>
-        <!--Footer-->
-        <div class="modal-footer mx-5 pt-3 mb-1">
-          <p class="font-small grey-text d-flex justify-content-end">Not a member? <a href="#" class="blue-text ml-1">
-          Sign Up</a></p>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+              <p class="font-small white-text d-flex justify-content-end">Have an account? <a href="funcionaro/dashboard.html" class="green-text ml-1 font-weight-bold">
+                  Log in</a></p>
+            </div>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
         </div>
       </div>
-      <!--/.Content-->
     </div>
+    <!--/.Content-->
   </div>
+</div>
+<!-- Modal -->
+
   <script type="text/javascript" src="js/jquery-3.4.0.js"></script>
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.js"></script>

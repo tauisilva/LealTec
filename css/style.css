@@ -62,3 +62,6 @@
 .form-dark .modal-header {
     border-bottom: none;
 }
+.form-dark .modal-content{
+  border-radius: 20px;
+}

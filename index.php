@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php include("modal.php"); include("funcionario/tecnico.php"); include("servicos/cadservicos.php");?>
+<?php include("cliente/cliente.php"); include("funcionario/tecnico.php"); include("servicos/cadservicos.php");?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,7 @@
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img  id="logo-img"  src="img/logo3.png" class="img-responsive" style="width: 100px;"></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><img id="logo-img"  src="img/logo3.png" class="img-responsive" style="width: 100px;"></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -22,29 +22,21 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="" data-toggle="modal" data-target="#modalCliente">Cliente</a>
+            <a class="nav-link" href="" data-toggle="modal" data-target="#cliente">Cliente</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#services">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Portifolio</a>
+            <a class="nav-link js-scroll-trigger" href="#roms">Roms</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="index.php?page=admin">adm</a>
           </li>
         </ul>
-        <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item avatar dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="modal" data-target="#modalLogin" aria-haspopud="true" aria-expanded="false" id="user" >
-            <img src="img/ex.jpg" class="rounded-circle z-depth-0"
-            alt="avatar image" style="width: 30px;">
-          </a>
-        </li>
-        <
       </div>
     </div>
   </nav>

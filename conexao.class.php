@@ -13,7 +13,7 @@ class Conexao extends Exception{
             $pass = "";
             $db = "LealTec";
     
-            $this->strConn = new mysqli($host, $user, $pass, $db);
+            @$this->strConn = new mysqli($host, $user, $pass, $db);
     
         } catch (Exception $e) {
             
