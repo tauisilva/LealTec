@@ -21,6 +21,9 @@ switch (@$_REQUEST["page"]) {
 	case 'admin':
 		include("funcionario/dashboard.html");
 		break;
+	case 'modalDesktop':
+		include("servicos/dashboard.html");
+		break;
 	
 	default:
 	include("dashboard.php");

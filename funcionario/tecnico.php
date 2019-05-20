@@ -50,7 +50,7 @@
 
             <!--Grid column-->
             <div class="col-md-12">
-              <p class="font-small white-text d-flex justify-content-end">Have an account? <a href="funcionaro/dashboard.html" class="green-text ml-1 font-weight-bold">
+              <p class="font-small white-text d-flex justify-content-end">Have an account? <a h class="green-text ml-1 font-weight-bold">
                   Log in</a></p>
             </div>
             <!--Grid column-->

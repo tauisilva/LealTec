@@ -1,41 +1,40 @@
-<!-- Modal serviços -->
-<div class="modal fade right" id="modalServicos" tabindex="-1" role="dialog" aria-labelledby="modalServicosLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content form-elegant" style="border-radius: 20px;" >
-      <div class="modal-header text-center"  style="background-image: linear-gradient(to right, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%); border-top-right-radius:  20px; border-top-left-radius: 20px;">
-        <h5 class="modal-title w-100 white-text font-weight-bold" id="modalServicosLabel">Serviços</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-6">
-              <button type="button" class="btn aqua-gradient white-text" data-toggle="modal" data-target="#modalSmartphones" style="border-radius: 20px;">Smartphone</button>
+<!-- Modal mobiles -->
+<div class="modal fade" id="modalServicos" tabindex="-1" role="dialog" aria-labelledby="modalServicosLabel"
+  aria-hidden="true" >
+  <div class="modal-dialog form-dark" role="document">
+    <!--Content-->
+    <div class="modal-content card card-image" style="background-image: url('img/mimix32.jpg'); border-radius: 20px;">
+      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 20px;">
+        <!--Header-->
+        <div class="modal-header text-center pb-4">
+          <h3 class="modal-title w-100 white-text font-weight-bold" id="modalServicosLabel"><a
+              class="white-text font-weight-bold"><strong> Mobile</strong></a></h3>
+          <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Body-->
+        <div class="modal-body">
+          <!--Body-->
+          <div class="row d-flex align-items-center mb-4">
+            <div class="text-center mb-3 col-md-12" >
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" data-toggle="modal" data-target="#modalSmartphones" style="border-radius: 20px;">Smartphone</button>
             </div>
-            <div class="col-md-6">
-              <button type="button" class="btn aqua-gradient white-text" data-toggle="modal" data-target="#modalTablets" style="border-radius: 20px;">tablets</button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <button type="button" class="btn aqua-gradient white-text" data-toggle="modal" data-target="#modalNotebooks" style="border-radius: 20px;">Notebook</button>
-            </div>
-            <div class="col-md-6">
-              <button type="button" class="btn aqua-gradient white-text" data-toggle="modal" data-target="#modalComputador" style="border-radius: 20px;">Computador</button>
+            <div class="text-center mb-3 col-md-12" >
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modalTablets"style="border-radius: 20px;">Tablets</button>
             </div>
           </div>
         </div>
+        <div class="modal-footer">
+        <button type="button"class="btn btn-outline-danger waves-effect" style="border-radius: 20px;" data-dismiss="modal">Close</button>
+        <button class="btn btn-outline-success waves-effect z-depth-1" style="border-radius: 20px;">Novo Serviço</button>
       </div>
-      <div class="modal-footer">
-        <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 20px;" data-dismiss="modal">Close</button>
-        <button class="btn btn-outline-primary waves-effect" style="border-radius: 20px;">Novo Serviço</button>
       </div>
     </div>
+    <!--/.Content-->
   </div>
 </div>
-<!-- Modal serviços-->
+<!-- Modal mobiles-->
 <!--------------------------------------------------------------------------------------------------------------------- Modal Smartphones -------------------------------------------------------------------------------------------------------->
 <!-- Modal: Smartphones -->
 <div class="modal fade" id="modalSmartphones" tabindex="-1" role="dialog" aria-labelledby="modalSmartphonesLabel"

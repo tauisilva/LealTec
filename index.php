@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php include("cliente/cliente.php"); include("funcionario/tecnico.php"); include("servicos/cadservicos.php");?>
+<?php include("cliente/cliente.php"); include("funcionario/tecnico.php");?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,7 +34,7 @@
             <a class="nav-link js-scroll-trigger" href="#team">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="index.php?page=admin">adm</a>
+            <a class="nav-link js-scroll-trigger" href="#footer">adm</a>
           </li>
         </ul>
       </div>

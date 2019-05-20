@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include("modal.php"); include("funcionario/tecnico.php"); include("servicos/cadservicos.php"); ?>
+<?php include("servicos/desktop.php"); include("funcionario/tecnico.php"); include("servicos/mobiles.php"); ?>
 <head>
 
   <meta charset="utf-8">
@@ -34,7 +34,7 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Bem Vindo Ao Seu Ambiente de Trabalho!</div>
+        <div class="intro-lead-in">Bem Vindo ao Seu Ambiente de Trabalho!</div>
         <div class="intro-heading text-uppercase">Tenha um Bom Serviço</div>
         <a class="btn btn-secundary btn-xl text-uppercase js-scroll-trigger white-text" style="border-radius: 20px; border-bottom-color: #FFF;" href="#services">Vamos lá!</a>
       </div>
@@ -60,7 +60,7 @@
           <p class="text-muted">Cadastre e Edite seu serviços envolvendo aparelhos mobiles, sendo eles tanto Tabletes quanto Smartphones.</p>
         </div>
         <div class="col-md-4">
-          <span class="fa-stack fa-4x" data-toggle="modal" data-target="#modalServicos">
+          <span class="fa-stack fa-4x" data-toggle="modal" data-target="#modalDesktop">
             <i class="fas fa-circle fa-stack-2x text-secundary"></i>
             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
           </span>
@@ -81,29 +81,58 @@
   <!-- Clients -->
   <section class="py-5" id="roms">
     <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="https://en.miui.com/download.html" target="_blank">
-            <img class="img-fluid d-block mx-auto" src="img/logos/xiaomi.png" alt="" style="width: 80px;">
+      <div class="row">    
+        <div class="col-md-4 col-sm-6" >
+          <a href="https://www.stockrom.net/motorola" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/motorola.png" style="width:  180px;">
           </a>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="https://www.stockrom.net/samsung">
-            <img class="img-fluid d-block mx-auto" src="img/logos/samsung.png" alt="" style="width: 180px;">
+        
+        <div class="col-md-4 col-sm-6">
+          <a href="https://www.stockrom.net/asus" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/asus.png" style="width: 180px;">
           </a>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+        <div class="col-md-4 col-sm-6">
+          <a href="https://www.stockrom.net/lenovo" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/lenovo.png" style="width: 180px;">
           </a>
         </div>
       </div>
-
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <a href="https://www.stockrom.net/samsung" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/samsung.png" style="width: 200px;">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://www.stockrom.net/lg" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/lg.png" style="width: 150px;">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://www.stockrom.net/multilaser" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/multilaser.png" style="width: 200px;">
+          </a>
+        </div>  
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <a href="https://en.miui.com/download.html" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/xiaomi.png"  style="width: 100px;">
+          </a>
+        </div>
+      <div class="col-md-4 col-sm-6">
+          <a href="https://www.stockrom.net/alcatel" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/alcatel.png" style="width: 100px;">
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://www.stockrom.net/genesis" target="_blank">
+            <img class="img-fluid d-block mx-auto" src="img/logos/genesis.png" style="width: 100px;">
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -112,7 +141,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+          <h2 class="section-heading text-uppercase">Team</h2>
           <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
@@ -124,17 +153,17 @@
             <p class="text-muted">Lead Designer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#"target="_blank">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#"target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#"target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
@@ -148,17 +177,17 @@
             <p class="text-muted">Lead Marketer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#" target="_blank">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#" target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
@@ -172,17 +201,17 @@
             <p class="text-muted">Lead Developer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
+                <a href="https://github.com/nlnoel" target="_blank">
+                  <i class="fab fa-github"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="#" target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
@@ -196,17 +225,17 @@
             <p class="text-muted">Front-End Developer</p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="https://github.com/tauisilva">
+                <a href="https://github.com/tauisilva" target="_blank">
                   <i class="fab fa-github"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.facebook.com/tauis1">
+                <a href="https://www.facebook.com/tauis1" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/taui-silva-749b8016b">
+                <a href="https://www.linkedin.com/in/taui-silva-749b8016b" target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </li>
@@ -222,7 +251,7 @@
     </div>
   </section>
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -231,7 +260,7 @@
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="funcionario/dashboard.html">
+              <a href="funcionario/admin/dashboard.html">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
