@@ -107,7 +107,10 @@ create table if not exists Funcionario(
 	id_func int unsigned not null auto_increment  primary key,
 	salario decimal(6,2) not null,
 	hora_entrada time,
-	hora_saida time
+	hora_saida time,
+    nome varchar(100),
+    email varchar(250),
+    senha varchar(32)
 )default charset = utf8 engine = InnoDB;
 
 create table if not exists Atendente(
