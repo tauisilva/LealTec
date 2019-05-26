@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <?php include("servicos/desktop.php"); include("funcionario/tecnico.php"); include("servicos/mobiles.php"); ?>
 <head>
 
@@ -141,8 +141,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Team</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+          <h2 class="section-heading text-uppercase">Time</h2>
+          <h3 class="section-subheading text-muted">Equipe de desenvolvimento.</h3>
         </div>
       </div>
       <div class="row">
@@ -255,7 +255,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Your Website 2019</span>
+          <span class="copyright">Copyright &copy; LealTec 2019</span>
         </div>
         <div class="col-md-4">
           <ul class="list-inline social-buttons">

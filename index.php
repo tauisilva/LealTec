@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php include("cliente/cliente.php"); include("funcionario/tecnico.php");?>
+<?= include("cliente/cliente.php"); include("funcionario/tecnico.php");?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,17 +42,6 @@
   </nav>
   
     <?php include("config.php"); ?>
-
-</body>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        
-
-      </div>
-    </div>
-  </div>
 
   <script type="text/javascript" src="js/jquery-3.4.0.js"></script>
   <script src="js/popper.js"></script>

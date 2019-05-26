@@ -17,14 +17,22 @@ class Conexao extends Exception{
     
         } catch (Exception $e) {
             
-            throw new Exception($e->getMenssage(), 1);
+            throw new Exception("Erro ao estabelecer conexão com o banco", 1);
             
         }
     }
 
     function Consultas($sql){
 
-        return $this->strConn->query($sql);
+        try{
+
+            return $this->strConn->query($sql);
+
+        }catch(Exception $e){
+            
+            throw new Exception("Erro ao tentar realizar a consulta", 1);
+            
+        }
         
     }
 }

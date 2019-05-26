@@ -173,8 +173,8 @@ create table if not exists OrdemServico(
 	foreign key(pessoa) references Pessoa(id_Pessoa)
 )default charset = utf8 engine = InnoDB;
 
-insert into Marca
-values (default,'Acer'),
+insert into Marca values
+(default,'Acer'),
 (default,'Apple'),
 (default,'Alcatel'),
 (default,'Asus'),
@@ -201,3 +201,42 @@ values (default,'Acer'),
 (default,'Xiaomi'),
 (default,'ZTE'),
 (default,'Outros');
+
+insert into Telefone values
+(default, '(61)98371-7627'),
+(default, '(62)92345-9876'),
+(default, '(63)98915-1234'),
+(default, '(41)95632-8585'),
+(default, '(21)94240-7070'),
+(default, '(11)93640-9674'),
+(default, '(51)98790-9696'),
+(default, '(31)98630-6012'),
+(default, '(11)98960-8484'),
+(default, '(21)94560-8585'),
+(default, '(61)98647-0000');
+
+insert into pessoa values
+(default, '033.334.331-37', 'Noel Lucas Cunha Magalhães', '1'),
+(default, '000.000.000-01', 'Irineu Voce Nao Sabe E Nem Eu', '2'),
+(default, '000.000.000-02', 'Railson', '3'),
+(default, '000.700.000-03', 'Taui', '4'),
+(default, '000.005.000-00', 'Jackson', '5'),
+(default, '000.070.000-00', 'Gabriel', '6'),
+(default, '000.010.000-00', 'Mestik Peireli', '7'),
+(default, '080.000.060-00', 'Manoel É o Cara', '8'),
+(default, '090.000.000-00', 'Mergulhão Ilimited', '9'),
+(default, '070.000.000-00', 'Godofredo', '10'),
+(default, '032.000.000-00', 'Godolores', '11');
+
+insert into Cliente values
+(default, '1','Quadra 21 Lote 5 Del Lago I(Itapoã)'),
+(default, '2','Quadra 22 Lote 5 Del Lago II(Itapoã)'),
+(default, '3','Quadra 25 Lote 5 Lago Sul'),
+(default, '4','Quadra 26 Lote 5 Lago Norte'),
+(default, '5','Quadra 27 Lote 5 Del Lago II(Itapoã)'),
+(default, '6','Quadra 28 Lote 5 Jardim Botânico VI'),
+(default, '7','Quadra 27 Lote 5 Sudoeste'),
+(default, '8','Quadra 17 Lote 5 Del Lago I(Itapoã)'),
+(default, '9','Quadra 58 Lote 5 Novo Gama'),
+(default, '10','Quadra 19 Lote 5 Estancia Quinta da Alvorada'),
+(default, '11','Quadra 10 Lote 5 Paranoa');
