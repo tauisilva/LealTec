@@ -34,8 +34,7 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-lead-in">Bem Vindo ao Seu Ambiente de Trabalho!</div>
-        <div class="intro-heading text-uppercase">Tenha um Bom Serviço</div>
+        <div class="intro-heading text-uppercase">Leal Tecnologia</div>
         <a class="btn btn-secundary btn-xl text-uppercase js-scroll-trigger white-text" style="border-radius: 20px; border-bottom-color: #FFF;" href="#services">Vamos lá!</a>
       </div>
     </div>
@@ -135,121 +134,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Team -->
-  <section class="bg-light page-section" id="team">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Time</h2>
-          <h3 class="section-subheading text-muted">Equipe de desenvolvimento.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/jackson.jpg" alt="">
-            <h4>Jackson Mendes</h4>
-            <p class="text-muted">Lead Designer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#"target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#"target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#"target="_blank">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/railson.jpg" alt="">
-            <h4>Railson</h4>
-            <p class="text-muted">Lead Marketer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#" target="_blank">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" target="_blank">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/noel.jpg" alt="">
-            <h4>Noel Magalhões</h4>
-            <p class="text-muted">Lead Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://github.com/nlnoel" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#" target="_blank">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/taui.jpg" alt="">
-            <h4>Taui Silva</h4>
-            <p class="text-muted">Front-End Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="https://github.com/tauisilva" target="_blank">
-                  <i class="fab fa-github"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.facebook.com/tauis1" target="_blank">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/taui-silva-749b8016b" target="_blank">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- Footer -->
   <footer class="footer" id="footer">
     <div class="container">
@@ -260,7 +144,7 @@
         <div class="col-md-4">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
-              <a href="funcionario/admin/dashboard.html">
+              <a href="funcionario/admin/index.php">
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
@@ -280,8 +164,7 @@
           <ul class="list-inline quicklinks">
             <li class="nav-item avatar dropdown">
               <a class="nav-link dropdown-toggle" data-toggle="modal" data-target="#modalLogin" aria-haspopud="true" aria-expanded="false" id="user" >
-                <img src="img/team/jackson.jpg" class="rounded-circle z-depth-0"
-                alt="" style="width:  50px;">
+                <img src="img/team/jackson.jpg" class="rounded-circle z-depth-0" alt="" height="35">
               </a>
             </li>
           </ul>

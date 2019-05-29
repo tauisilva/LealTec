@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?= include("cliente/cliente.php"); include("funcionario/tecnico.php");?>
+<?php include("cliente/cliente.php"); include("funcionario/tecnico.php");?>
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,9 +32,6 @@
             <a class="nav-link js-scroll-trigger" href="#roms">Roms</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Team</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#footer">adm</a>
           </li>
         </ul>
@@ -43,9 +41,9 @@
   
     <?php include("config.php"); ?>
 
-  <script type="text/javascript" src="js/jquery-3.4.0.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+  <script type="text/javascript" src="funcionario/admin/js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/mdb.js"></script>
   </body>
 </html>

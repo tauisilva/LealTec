@@ -66,7 +66,7 @@
 </div>
 <!-- Modal -->
 
-  <script type="text/javascript" src="js/jquery-3.4.0.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/mdb.js"></script>
+  <script type="text/javascript" src="admin/js/jquery-3.4.0.min.js"></script>
+  <script type="text/javascript" src="admin/js/popper.min.js"></script>
+  <script type="text/javascript" src="admin/js/bootstrap.js"></script>
+  <script type="text/javascript" src="admin/js/mdb.js"></script>
