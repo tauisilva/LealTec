@@ -13,8 +13,8 @@
       <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 20px;">
         <!--Header-->
         <div class="modal-header text-center pb-4">
-          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLogin"><strong>SIGN</strong> <a
-              class="green-text font-weight-bold"><strong> UP</strong></a></h3>
+          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLogin"><strong>Acessar</strong> <a
+              class="green-text font-weight-bold"><strong> Sistema</strong></a></h3>
           <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -22,42 +22,29 @@
         <!--Body-->
         <div class="modal-body">
           <!--Body-->
-          <div class="md-form mb-5">
-            <input type="email" id="Form-email5" class="form-control validate white-text">
-            <label data-error="wrong" data-success="right" for="Form-email5">Your email</label>
-          </div>
-
-          <div class="md-form pb-3">
-            <input type="password" id="Form-pass5" class="form-control validate white-text">
-            <label data-error="wrong" data-success="right" for="Form-pass5">Your password</label>
-          </div>
-
-          <!--Grid row-->
-          <div class="row d-flex align-items-center mb-4">
-
-            <!--Grid column-->
-            <div class="text-center mb-3 col-md-12" >
-              <a ></a>
-              <button type="button" class=" btn btn-success btn-block z-depth-1" style="border-radius: 20px;">Sign up</button>
+          <form method="POST" action="login/autenticacao.php">
+            <div class="md-form mb-5">
+              <input type="email" id="Form-email5" class="form-control validate white-text">
+              <label data-error="wrong" data-success="right" name="email" for="Form-email5">E-mail</label>
             </div>
-            <!--Grid column-->
 
-          </div>
-          <!--Grid row-->
-
-          <!--Grid row-->
-          <div class="row">
-
-            <!--Grid column-->
-            <div class="col-md-12">
-              <p class="font-small white-text d-flex justify-content-end">Have an account? <a h class="green-text ml-1 font-weight-bold">
-                  Log in</a></p>
+            <div class="md-form pb-3">
+              <input type="password" id="Form-pass5" class="form-control validate white-text">
+              <label data-error="wrong" data-success="right" name="senha" for="Form-pass5">Senha</label>
             </div>
-            <!--Grid column-->
 
+            <!--Grid row-->
+            <div class="row d-flex align-items-center mb-4">
+
+              <!--Grid column-->
+              <div class="text-center mb-3 col-md-12" >
+                <a ></a>
+                <button type="submit" class=" btn btn-success btn-block z-depth-1" style="border-radius: 20px;">Logar</button>
+              </div>
+            </form>
+            <!--Grid column-->
           </div>
           <!--Grid row-->
-
         </div>
       </div>
     </div>
