@@ -116,7 +116,7 @@ create table if not exists Funcionario(
 create table if not exists Atendente(
 	id_atendent int unsigned not null auto_increment primary key,
 	funcionario int unsigned not null,
-	qtd_atendimento int,
+	qtd_atendimento int default '0',
 	foreign key(funcionario) references Funcionario(id_func)
 )default charset = utf8 engine = InnoDB;
 
@@ -124,8 +124,8 @@ create table if not exists Tecnico(
 	id_tecnico int unsigned not null auto_increment primary key,
 	funcionario int unsigned not null,
 	especializacao varchar(100) not null,
-	qtd_servico int,
-	qtd_servico_errado int,
+	qtd_servico int default '0',
+	qtd_servico_errado int default '0',
 	foreign key(funcionario) references Funcionario(id_func)
 )default charset = utf8 engine = InnoDB;
 
@@ -240,3 +240,19 @@ insert into Cliente values
 (default, '9','Quadra 58 Lote 5 Novo Gama'),
 (default, '10','Quadra 19 Lote 5 Estancia Quinta da Alvorada'),
 (default, '11','Quadra 10 Lote 5 Paranoa');
+
+insert into funcionario values
+('1', '5000.00', '12:00', '20:00', 'Jackson','jackson.leal@leal.com.br',md5('123')),
+('2', '2500.00', '12:00', '20:00', 'Noel','noel.magalhaes@leal.com.br',md5('456')),
+('3', '2500.00', '12:00', '20:00', 'Taui','taui.silva@leal.com.br',md5('789')),
+('4', '2500.00', '12:00', '20:00', 'Railson','railson.santiago@leal.com.br',md5('147')),
+('5', '2500.00', '12:00', '20:00', 'Bruno','bruno@leal.com.br',md5('258'));
+
+insert into tecnico (id_tecnico, funcionario, especializacao)
+values(default, '1','Conserta tudo');
+
+insert into atendente (id_atendent, funcionario) 
+values (default, '2'),
+(default, '3'),
+(default, '4'),
+(default, '5');
