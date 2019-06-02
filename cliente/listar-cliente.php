@@ -1,16 +1,18 @@
-<!--?php 
-
-  @include_once("../conexao.class.php");
+<?php
+  
+  require_once("../conexao.class.php");
 
   try {
-    
+      
     $conn = new Conexao();
 
-    $strQuery = "SELECT C.id_cliente, P.cpf, P.nome, T.numero FROM cliente C LEFT OUTER JOIN Pessoa P ON C.pessoa = P.id_pessoa LEFT OUTER JOIN Telefone T ON P.numero = T.id_tel;";
+    $strQuery = "SELECT C.id_cliente as id, P.cpf, P.nome, T.numero, C.endereco FROM cliente C LEFT OUTER JOIN Pessoa P ON C.pessoa = P.id_pessoa LEFT OUTER JOIN Telefone T ON P.numero = T.id_tel;";
     
     $res = $conn->Consultas($strQuery);
     
     $count = 0;
+
+    define("PROC", "../cliente/acoesCLiente.php");
 
   } catch (Exception $e) {
     
@@ -18,10 +20,10 @@
     
   }
 
-?-->
+?>
 
 <!-- Modal: LisCliente -->
-<div class="modal fade" id="modalLisCliente" tabindex="-1" role="dialog" aria-labelledby="modalLisClienteLabel"
+<div class="modal fade" id="modalLisCliente" style="display: none;" tabindex="-1" role="dialog" aria-labelledby="modalLisClienteLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-fluid" role="document">
     <div class="modal-content" style="border-radius: 20px;">
@@ -42,17 +44,21 @@
               <th>Nome</th>
               <th>CPF</th>
               <th>Numero</th>
+              <td>Endereço</td>
+              <td>Ação</td>
             </tr>
           </thead>
           <tbody>
-            <?php //while($row = $res->fetch_Assoc()):?>
+            <?php while($row = $res->fetch_Assoc()):?>
               <tr>
                 <th scope="row"><?= $count++ ?></th>
-                <td>Product 1</td>
-                <td>100$</td>
-                <td><a><i class="fas fa-times"></i></a></td>
+                <td><?= trim($row["nome"]) ?></td>
+                <td><?= trim($row["cpf"]) ?></td>
+                <td><?= trim($row["numero"]) ?></td>
+                <td><?= trim($row["endereco"]) ?></td>  
+                <td><a id="btnDeletar" data-id="<?= $row["id"] ?>"><i class="fas fa-times"></i></a></td>
               </tr>
-            <?php //endwhile; ?>
+            <?php endwhile; ?>
           </tbody>
         </table>
 
@@ -76,3 +82,32 @@
   </div>
 </div>
 <!-- Modal: LisCliente -->
+
+<script type="text/javascript">
+
+  $("a[id='btnDeletar']").click(function(){
+
+    var btnDeletar = $(this);
+    $.ajax({
+
+      url: "<?= PROC ?>",
+      type: "POST",
+      dataType: "json",
+      data:{
+
+        acao: "Deletar",
+        idDeletar: $(this).attr("data-id")
+      }
+    }).done(function(val){
+      if(val["error"]){
+        alert(val["message"]);
+      }else{
+        alert(btnDeletar.parent().parent().html());
+      }
+    }).fail(function(x, status, val){
+      alert(val);
+    });
+
+  });
+
+</script>

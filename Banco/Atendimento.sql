@@ -99,7 +99,7 @@ create table if not exists Pessoa(
 create table if not exists Cliente(
 	id_cliente int unsigned not null auto_increment primary key,
 	pessoa int unsigned not null,
-	endereço varchar(250),
+	endereco varchar(250),
 	foreign key(pessoa) references Pessoa(id_pessoa)
 )default charset = utf8 engine = InnoDB;
 

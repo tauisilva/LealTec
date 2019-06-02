@@ -1,4 +1,3 @@
-
 <!-- Modal Tecnico  --> 
 <div class="modal fade" id="cliente" tabindex="-1" role="dialog" aria-labelledby="myModalLogin"
   aria-hidden="true" >
@@ -19,7 +18,7 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" data-toggle="modal" data-target="#modalProcurar" style="border-radius: 20px;">Procurar</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" data-toggle="modal" style="border-radius: 20px;" onclick="abreModal()">Procurar</button>
             </div>
             <div class="text-center mb-3 col-md-12" >
               <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modalCadastrar"style="border-radius: 20px;">Cadastrar</button>
@@ -44,7 +43,7 @@
         <!--Header-->
         <div class="modal-header text-center pb-4">
           <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalProcurar"><a
-              class="green-text font-weight-bold"><strong>SEARCH</strong></a></h3>
+              class="green-text font-weight-bold"><strong>Consultar</strong></a></h3>
           <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -65,7 +64,6 @@
             <!--Grid column-->
             <div class="text-center mb-3 col-md-12" >
               <button type="button" class=" btn btn-outline-success btn-block z-depth-1" style="border-radius: 20px;" data-toggle="modal" data-target="#modalLisCliente">Procurar</button>
-              <?php include("listar-cliente.php"); ?>
             </div>
             <!--Grid column-->
           </div>
@@ -125,3 +123,16 @@
   </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------------- Modal Cadastrar ---------------------------------------------------------------------------------------------------->
+
+<script type="text/javascript">
+  function abreModal(){
+    $.ajax({
+      url: "cliente/listar-cliente.php",
+      type: "POST",
+      success: function(data){              
+        $(".modal").html(data);
+        $("#modalLisCliente").modal("show");
+      }
+    });
+  }
+</script>

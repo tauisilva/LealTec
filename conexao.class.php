@@ -12,9 +12,10 @@ class Conexao extends Exception{
             $user =  "root";
             $pass = "";
             $db = "LealTec";
-    
+            
             @$this->strConn = new mysqli($host, $user, $pass, $db);
-    
+            $this->strConn->query('SET character_set_results=utf8');
+
         } catch (Exception $e) {
             
             throw new Exception("Erro ao estabelecer conexão com o banco", 1);
