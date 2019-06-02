@@ -1,34 +1,38 @@
 <?php
 
-session_start();
-include_once("../conexao.class.php");
+    session_start();
+    include_once("../conexao.class.php");
 
-$conn = new Conexao();
+    $conn = new Conexao();
 
-if(empty($_POST["email"]) || empty($_POST["senha"])  ){
-    header("location: ../index.php");
-    exit();
+    if(empty($_POST["email"]) || empty($_POST["senha"])  ){
 
-}
+        print "<script>alert('Usuario e/ou senha vazio'); location.href = '../index.php';</script>";
+        exit();
 
-$email = mysqli_real_escape_string(trim($_POST["email"]));
-$senha = mysqli_real_escape_string(trim($_POST["senha"]));
+    }
 
-$strQuery = "SELECT id_func, nome FROM Funcionario WHERE {'$email'} AND MD5({'$senha'})";
+    $email = trim($_POST["email"]);
+    $senha = trim($_POST["senha"]);
 
-$res = $conn->Consultas($strQuery);
+    $strQuery = "SELECT * FROM Funcionario WHERE email = '$email' AND senha = MD5('$senha')";
 
-if($row === 1){
+    $res = $conn->Consultas($strQuery);
 
-    $_SESSION['usuario'] = $res["nome"];
-    header("location: ../funcionario/admin/index.php");
-    exit();
-} 
-else{
+    $row = $res->num_rows;
 
-    $_SESSION["nao_autenticado"] = true;
-    header("location: ../index.php");
-    exit();
-}
+    if($row == 1){
+        
+        $res = $res->fetch_assoc();
+        $_SESSION["usuario"] = $res["nome"];
+        print $_SESSION["usuario"];
+        header("location: ../funcionario/admin/index.php");
+        exit();
+    }
+    else{
+
+        print "<script>alert('Usuario ou senha incorreto, tente novamente mais tarde'); location.href = '../index.php';</script>";
+        exit();
+    }
 
 ?>

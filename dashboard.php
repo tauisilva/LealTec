@@ -35,7 +35,6 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading text-uppercase">Leal Tecnologia</div>
-        <a class="btn btn-secundary btn-xl text-uppercase js-scroll-trigger white-text" style="border-radius: 20px; border-bottom-color: #FFF;" href="#services">Vamos lá!</a>
       </div>
     </div>
   </header>

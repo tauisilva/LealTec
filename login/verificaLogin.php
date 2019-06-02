@@ -1,9 +1,10 @@
 <?php
+    session_start();
 
-if(!$_SESSION["nome"] || empty("nome")){
+    if(!$_SESSION["usuario"] || empty($_SESSION["usuario"])){
 
-    header("location: index.php");
-    exit();
-}
+        header("location: ../../index.php");
+        
+    }
 
 ?>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php include("cliente/cliente.php"); include("funcionario/tecnico.php");?>
+<?php 
+  include("cliente/cliente.php"); 
+  include("funcionario/tecnico.php");
+?>
 
   <head>
     <meta charset="utf-8">
