@@ -219,14 +219,14 @@ insert into pessoa values
 (default, '033.334.331-37', 'Noel Lucas Cunha Magalhães', '1'),
 (default, '000.000.000-01', 'Irineu Voce Nao Sabe E Nem Eu', '2'),
 (default, '000.000.000-02', 'Railson', '3'),
-(default, '000.700.000-03', 'Taui', '4'),
-(default, '000.005.000-00', 'Jackson', '5'),
-(default, '000.070.000-00', 'Gabriel', '6'),
-(default, '000.010.000-00', 'Mestik Peireli', '7'),
+(default, '000.700.000-03', 'Taui', '5'),
+(default, '000.005.000-00', 'Jackson', '6'),
+(default, '000.070.000-00', 'Gabriel', '4'),
+(default, '000.010.000-00', 'Mestik Peireli', '9'),
 (default, '080.000.060-00', 'Manoel É o Cara', '8'),
-(default, '090.000.000-00', 'Mergulhão Ilimited', '9'),
-(default, '070.000.000-00', 'Godofredo', '10'),
-(default, '032.000.000-00', 'Godolores', '11');
+(default, '090.000.000-00', 'Mergulhão Ilimited', '7'),
+(default, '070.000.000-00', 'Godofredo', '11'),
+(default, '032.000.000-00', 'Godolores', '10');
 
 insert into Cliente values
 (default, '1','Quadra 21 Lote 5 Del Lago I(Itapoã)'),
