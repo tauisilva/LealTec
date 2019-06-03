@@ -6,13 +6,13 @@
       
     $conn = new Conexao();
 
-    $strQuery = "SELECT C.id_cliente as id, P.cpf, P.nome, T.numero, C.endereco FROM cliente C LEFT OUTER JOIN Pessoa P ON C.pessoa = P.id_pessoa LEFT OUTER JOIN Telefone T ON P.numero = T.id_tel;";
+    $strQuery = "SELECT C.id_cliente AS id, P.cpf, P.nome, T.numero, C.endereco FROM cliente C LEFT OUTER JOIN Pessoa P ON C.pessoa = P.id_pessoa LEFT OUTER JOIN Telefone T ON P.numero = T.id_tel;";
     
     $res = $conn->Consultas($strQuery);
     
-    $count = 0;
+    $count = 1;
 
-    define("PROC", "../cliente/acoesCLiente.php");
+    define("PROC", "cliente/acoesCliente.php");
 
   } catch (Exception $e) {
     
@@ -56,7 +56,11 @@
                 <td><?= trim($row["cpf"]) ?></td>
                 <td><?= trim($row["numero"]) ?></td>
                 <td><?= trim($row["endereco"]) ?></td>  
-                <td><a id="btnDeletar" data-id="<?= $row["id"] ?>"><i class="fas fa-times"></i></a></td>
+                <td>
+                  <a id="btnDeletar" data-id="<?= $row["id"] ?>">
+                    <i class="fas fa-times"></i>
+                  </a>
+                </td>
               </tr>
             <?php endwhile; ?>
           </tbody>
@@ -88,6 +92,7 @@
   $("a[id='btnDeletar']").click(function(){
 
     var btnDeletar = $(this);
+    
     $.ajax({
 
       url: "<?= PROC ?>",
@@ -102,7 +107,7 @@
       if(val["error"]){
         alert(val["message"]);
       }else{
-        alert(btnDeletar.parent().parent().html());
+        btnDeletar.parent().parent().remove();
       }
     }).fail(function(x, status, val){
       alert(val);
