@@ -24,7 +24,6 @@ class Conexao extends Exception{
     }
 
     function Consultas($sql){
-
         try{
 
             return $this->strConn->query($sql);
@@ -35,6 +34,54 @@ class Conexao extends Exception{
             
         }
         
+    }
+    function Insercao($sql){
+        try{
+
+            $this->strConn->query($sql);
+            return true;
+
+        }catch(Exception $e){
+            
+            throw new Exception("Erro ao tentar realizar a consulta", 1);
+            
+        }
+        
+    }
+    function InsercaoMult($sql){
+        try{
+
+            $this->strConn->query($sql);
+            return true;
+
+        }catch(Exception $e){
+            
+            throw new Exception("Erro ao tentar realizar a consulta", 1);
+            
+        }
+        
+    }
+    function Deletar($sql){
+        try {
+            
+            $this->strConn->query($sql);
+            return true;
+
+        } catch (Exception $e) {
+
+            throw new Exception("Erro ao tentar realizar exclusão", 1);
+            
+        }
+    }
+    function DeletarMult($sql){
+        try {
+            
+            $this->strConn->multi_query($sql);
+            return true;
+
+        } catch (Exception $e) {
+            throw new Exception("Erro ao tentar realizar exclusão", 1);
+        }
     }
 }
     
