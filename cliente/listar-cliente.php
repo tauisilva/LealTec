@@ -57,7 +57,7 @@
                 <td><?= trim($row["numero"]) ?></td>
                 <td><?= trim($row["endereco"]) ?></td>  
                 <td>
-                  <a id="btnDeletar" data-id="<?= $row["id"] ?>">
+                  <a id="btnDeletar" data-id=<?= $row["id"] ?>>
                     <i class="fas fa-times"></i>
                   </a>
                 </td>
@@ -92,7 +92,7 @@
   $("a[id='btnDeletar']").click(function(){
 
     var btnDeletar = $(this);
-    
+
     $.ajax({
 
       url: "<?= PROC ?>",
@@ -108,11 +108,11 @@
         alert(val["message"]);
       }else{
         btnDeletar.parent().parent().remove();
+        alert("Exclusão do cliente "+val["usuario"]+" realizada com sucesso");
       }
     }).fail(function(x, status, val){
       alert(val);
     });
-
   });
 
 </script>
