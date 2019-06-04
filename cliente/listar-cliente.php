@@ -91,28 +91,35 @@
 
   $("a[id='btnDeletar']").click(function(){
 
-    var btnDeletar = $(this);
+    var ret = confirm("Deseja realmente excluir esse cliente?");
 
-    $.ajax({
+    if(ret){
 
-      url: "<?= PROC ?>",
-      type: "POST",
-      dataType: "json",
-      data:{
+      var btnDeletar = $(this);
 
-        acao: "Deletar",
-        idDeletar: $(this).attr("data-id")
-      }
-    }).done(function(val){
-      if(val["error"]){
-        alert(val["message"]);
-      }else{
-        btnDeletar.parent().parent().remove();
-        alert("Exclusão do cliente "+val["usuario"]+" realizada com sucesso");
-      }
-    }).fail(function(x, status, val){
-      alert(val);
-    });
+      $.ajax({
+
+        url: "<?= PROC ?>",
+        type: "POST",
+        dataType: "json",
+        data:{
+
+          acao: "Deletar",
+          idDeletar: $(this).attr("data-id")
+        }
+      }).done(function(val){
+        if(val["error"]){
+          alert(val["message"]);
+        }else{
+          btnDeletar.parent().parent().remove();
+          alert("Exclusão do cliente "+val["usuario"]+" realizada com sucesso");
+        }
+      }).fail(function(x, status, val){
+        alert(val);
+      });
+      
+    }
+    
   });
 
 </script>
