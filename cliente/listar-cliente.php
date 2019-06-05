@@ -171,5 +171,14 @@
     location.reload();
     
   });
+
+  $("body").click(function (event) {
+     if(event.target.id!="modalLisCliente"){
+        <?php
+          $_SESSION["modal"] = "#cliente";
+        ?>
+        location.reload();
+     }
+  });
   
 </script>
