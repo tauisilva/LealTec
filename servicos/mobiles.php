@@ -3,7 +3,7 @@
   aria-hidden="true" >
   <div class="modal-dialog form-dark" role="document">
     <!--Content-->
-    <div class="modal-content card card-image" style="background-image: url('img/mimix32.jpg'); border-radius: 10px;">
+    <div class="modal-content card card-image" style="background-image: url('img/mimix3.jpg'); border-radius: 10px;">
       <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 10px;">
         <!--Header-->
         <div class="modal-header text-center pb-4">

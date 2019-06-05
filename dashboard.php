@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<?php include("servicos/desktop.php"); include("funcionario/tecnico.php"); include("servicos/mobiles.php"); ?>
+<?php include("servicos/desktop.php"); include("funcionario/tecnico.php"); include("servicos/mobiles.php"); include("servicos/outros.php"); ?>
 <head>
 
   <meta charset="utf-8">
@@ -66,7 +66,7 @@
           <p class="text-muted">Cadastre e Edite seu serviços envolvendo aparelhos Desktop, sendo eles tanto Pc's quanto Notebooks</p>
         </div>
         <div class="col-md-4">
-          <span class="fa-stack fa-4x" data-toggle="modal" data-target="#modalServicos">
+          <span class="fa-stack fa-4x" data-toggle="modal" data-target="#modalOutros">
             <i class="fas fa-circle fa-stack-2x text-secundary"></i>
             <i class="fas fa-microchip fa-stack-1x fa-inverse"></i>
           </span>
