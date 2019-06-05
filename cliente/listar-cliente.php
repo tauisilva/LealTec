@@ -48,7 +48,7 @@
               <td>Ação</td>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="Resultado">
             <?php while($row = $res->fetch_Assoc()):?>
               <tr>
                 <th scope="row"><?= $count++ ?></th>
@@ -71,7 +71,10 @@
       <table>
         <tr>
           <td>
-            <label for="Pesquisar">Pesquisar</label>
+            <label for="consulta" style="font-size: 14pt; ">Pesquisar Cliente</label>&nbsp;
+          </td>
+          <td>
+            <input type="text" id="consulta" size="100%" class="form-control" required>
           </td>
         </tr>
       </table>
@@ -80,7 +83,7 @@
       <!--Footer-->
       <div class="modal-footer">
       <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 20px;" id="btnVoltar">voltar</button>
-        <button class="btn btn-outline-primary waves-effect" style="border-radius: 20px;">Checkout</button>
+        <button type="button" id="btnConsultar" class="btn btn-outline-primary waves-effect" style="border-radius: 20px;">Consultar</button>
       </div>
     </div>
   </div>
@@ -121,14 +124,45 @@
     }
     
   });
-/*
-  $("a[id='btnConsultar']").click(function(){
+
+  $("#btnConsultar").click(function(){
 
     $.ajax({
 
+      url: "<?= PROC ?>",
+      type: "POST",
+      dataType: "json",
+
+      data:{
+
+        acao: "Cosultar",
+        consulta: $("#consulta").val()
+
+      }
+    }).done(function(val){
+      if(val["error"]){
+        alert("message");
+      }
+      else{
+        $("#Resultado").append("<tr>"+
+                                  "<th scope=\"row\">"+
+                                  "<td>"+$.trim(val["nome"])+"</td>"+
+                                  "<td>"+$.trim(val["cpf"])+"</td>"+
+                                  "<td>"+$.trim(val["numero"])+"</td>"+
+                                  "<td>"+$.trim(val["endereco"])+"</td>"+
+                                  "<td>"+
+                                    "<a id=\"btnDeletar\" data-id='"+$.trim(val["id"])+"'>"+
+                                      "<i class=\"fas fa-times\"></i>"+
+                                    "</a>"+
+                                  "</td>"+
+                                "</tr>");
+      }
+    }).fail(function(x, status, val){
+      alert(val);
     });
+    
   });
-*/
+
   $("#btnVoltar").click(function(){
 
     <?php

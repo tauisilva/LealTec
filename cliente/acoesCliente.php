@@ -12,6 +12,7 @@
         case 'Inserir':
             //code
             break;
+        
         case 'Deletar':
             try{
                 $conn = new Conexao();
@@ -46,6 +47,32 @@
                 
                 echo json_encode($ret);
             }
+            
+            break;
+
+        case 'Consultar':    
+            try{
+                $txtConsulta = trim($_POST["consulta"]);
+
+                $conn = new Conexao();
+
+                $strConsulta =  "SELECT C.id_cliente AS id, P.cpf, P.nome, T.numero, C.endereco FROM cliente C".
+                                " LEFT OUTER JOIN Pessoa P ON C.pessoa = P.id_pessoa".
+                                " LEFT OUTER JOIN Telefone T ON P.numero = T.id_tel".
+                                " WHERE P.nome = '$txtConsulta' OR P.cpf = '$txtConsulta'".
+                                " OR T.numero = '$txtConsulta' OR C.endereco = '$txtConsulta'";
+                
+                $pesq = $conn->Consultas($strConsulta);
+
+                $retRow = $pesq->fetch_assoc();
+                echo json_encode($retRow);
+
+            }catch(Exception $e){
+                $ret = array("error" => true, "message" => $e->getMessage());
+                
+                echo json_encode($ret);
+            }
+
             break;
     }
 
