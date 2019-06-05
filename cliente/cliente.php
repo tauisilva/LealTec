@@ -132,6 +132,11 @@
       success: function(data){
         $(".modal").html(data);
         $("#modalLisCliente").modal("show");
+
+        $("#modalLisCliente").on("hide.bs.modal", function(e){
+          <?php $_SESSION["modal"] = "#cliente"; ?>
+          location.reload();
+        });
       }
     });
   }
