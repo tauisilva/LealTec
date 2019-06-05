@@ -55,6 +55,12 @@
     <script>
       $("<?= $_SESSION["modal"]?>").modal("show");
     </script>
-  <?php endif; ?>
+  <?php
+
+    endif;
+    
+    unset($_SESSION["modal"]);
+
+  ?>
   </body>
 </html>
