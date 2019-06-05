@@ -59,12 +59,13 @@
                 $strConsulta =  "SELECT C.id_cliente AS id, P.cpf, P.nome, T.numero, C.endereco FROM cliente C".
                                 " LEFT OUTER JOIN Pessoa P ON C.pessoa = P.id_pessoa".
                                 " LEFT OUTER JOIN Telefone T ON P.numero = T.id_tel".
-                                " WHERE P.nome = '$txtConsulta' OR P.cpf = '$txtConsulta'".
-                                " OR T.numero = '$txtConsulta' OR C.endereco = '$txtConsulta'";
+                                " WHERE P.nome LIKE '%$txtConsulta%' OR P.cpf LIKE '%$txtConsulta%'".
+                                " OR T.numero LIKE '%$txtConsulta%' OR C.endereco LIKE '%$txtConsulta%'";
                 
                 $pesq = $conn->Consultas($strConsulta);
 
                 $retRow = $pesq->fetch_assoc();
+
                 echo json_encode($retRow);
 
             }catch(Exception $e){
