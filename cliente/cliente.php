@@ -18,10 +18,10 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" data-toggle="modal" style="border-radius: 20px;" onclick="abreModal()">Procurar</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" dismiss="cliente" data-toggle="modal" style="border-radius: 20px;" onclick="listarCliente()">Procurar</button>
             </div>
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modalCadastrar"style="border-radius: 20px;">Cadastrar</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modalCadastrar" style="border-radius: 20px;">Cadastrar</button>
             </div>
           </div>
 
@@ -112,7 +112,7 @@
           <div class="row d-flex align-items-center mb-4">
             <!--Grid column-->
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class=" btn btn-outline-success btn-block z-depth-1" style="border-radius: 20px;" data-toggle="modal" data-target="#modalLisCliente">Cadastrar</button>
+              <button type="button" class=" btn btn-outline-success btn-block z-depth-1" style="border-radius: 20px;" data-miss="#" data-toggle="modal" data-target="#modalLisCliente">Cadastrar</button>
             </div>
             <!--Grid column-->
           </div>
@@ -123,13 +123,13 @@
   </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------------- Modal Cadastrar ---------------------------------------------------------------------------------------------------->
-
+ 
 <script type="text/javascript">
-  function abreModal(){
+  function listarCliente(){
     $.ajax({
       url: "cliente/listar-cliente.php",
       type: "POST",
-      success: function(data){              
+      success: function(data){
         $(".modal").html(data);
         $("#modalLisCliente").modal("show");
       }

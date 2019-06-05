@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php
+  session_start();
   require_once("cliente/cliente.php"); 
   include("funcionario/tecnico.php");
 
@@ -49,5 +50,11 @@
   <script type="text/javascript" src="funcionario/admin/js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/mdb.js"></script>
+  
+  <?php if(isset($_SESSION["modal"])): ?>
+    <script>
+      $("<?= $_SESSION["modal"]?>").modal("show");
+    </script>
+  <?php endif; ?>
   </body>
 </html>

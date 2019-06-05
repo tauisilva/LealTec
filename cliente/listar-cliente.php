@@ -1,5 +1,5 @@
 <?php
-  
+  session_start();
   require_once("../conexao.class.php");
 
   try {
@@ -79,7 +79,7 @@
       </div>
       <!--Footer-->
       <div class="modal-footer">
-        <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 20px;" data-dismiss="modal" data-target="#modalServicos">voltar</button>
+      <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 20px;" id="btnVoltar">voltar</button>
         <button class="btn btn-outline-primary waves-effect" style="border-radius: 20px;">Checkout</button>
       </div>
     </div>
@@ -117,9 +117,25 @@
       }).fail(function(x, status, val){
         alert(val);
       });
-      
+
     }
     
   });
+/*
+  $("a[id='btnConsultar']").click(function(){
 
+    $.ajax({
+
+    });
+  });
+*/
+  $("#btnVoltar").click(function(){
+
+    <?php
+      $_SESSION["modal"] = "#cliente";
+    ?>
+    location.reload();
+    
+  });
+  
 </script>
