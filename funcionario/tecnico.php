@@ -10,8 +10,8 @@
   aria-hidden="true" >
   <div class="modal-dialog form-dark" role="document">
     <!--Content-->
-    <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 20px;">
-      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 20px;">
+    <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 10px;">
+      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 10px;">
         <!--Header-->
         <div class="modal-header text-center pb-4">
           <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLogin"><strong>Acessar</strong> <a class="green-text font-weight-bold"><strong> Sistema</strong></a></h3>
@@ -39,7 +39,7 @@
               <!--Grid column-->
               <div class="text-center mb-3 col-md-12" >
                 <a ></a>
-                <button type="submit" id="btnLogar" class=" btn btn-success btn-block z-depth-1" style="border-radius: 20px;">Logar</button>
+                <button type="submit" id="btnLogar" class=" btn btn-success btn-block z-depth-1" style="border-radius: 10px;">Logar</button>
               </div>
             </form>
             

@@ -26,9 +26,9 @@
 <div class="modal fade" id="modalLisCliente" style="display: none;" tabindex="-1" role="dialog" aria-labelledby="modalLisClienteLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-fluid" role="document">
-    <div class="modal-content" style="border-radius: 20px;">
+    <div class="modal-content" style="border-radius: 10px;">
       <!--Header-->
-      <div class="modal-header" style="background-image: linear-gradient(to right, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%); border-top-right-radius:  20px; border-top-left-radius: 20px;">
+      <div class="modal-header" style="background-image: linear-gradient(to right, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%); border-top-right-radius:  10px; border-top-left-radius: 10px;">
         <h4 class="modal-title white-text" id="myModalLisCliente">Lista de Clientes</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
@@ -82,8 +82,8 @@
       </div>
       <!--Footer-->
       <div class="modal-footer">
-      <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 20px;" id="btnVoltar">voltar</button>
-        <button type="button" id="btnConsultar" class="btn btn-outline-primary waves-effect" style="border-radius: 20px;">Consultar</button>
+      <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 10px;" id="btnVoltar">voltar</button>
+        <button type="button" id="btnConsultar" class="btn btn-outline-primary waves-effect" style="border-radius: 10px;">Consultar</button>
       </div>
     </div>
   </div>

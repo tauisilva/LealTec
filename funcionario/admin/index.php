@@ -41,7 +41,7 @@
         <li class="nav-item avatar dropdown">
           <a class="nav-link p-0" href="../../login/logout.php" >
             <img src="jackson.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="35">
-            <button type="button" class="btn btn-primary btn-rouded btn-sm waves-effect waves-light" style="border-radius: 20px;" data-toggle="modal" data-target="basicExampleModal"><i class="fas fa-sign-out-alt"></i></button>
+            <button type="button" class="btn btn-primary btn-rouded btn-sm waves-effect waves-light" style="border-radius: 10px;" data-toggle="modal" data-target="basicExampleModal"><i class="fas fa-sign-out-alt"></i></button>
           </a>
         </li>
       </ul>

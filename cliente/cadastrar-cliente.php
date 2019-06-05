@@ -19,7 +19,7 @@
 <style type="text/css">
 	.container{
 		background-image: linear-gradient(60deg, #FFF 0%, #2b76b9 37%, #35eb93 65%, #2cacd1 100%);
-		border-radius: 15px;
+		border-radius: 10px;
 	}
 
 </style>
@@ -29,8 +29,8 @@
   aria-hidden="true" >
   <div class="modal-dialog form-dark" role="document">
     <!--Content-->
-    <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 20px;">
-      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 20px;">
+    <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 10px;">
+      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 10px;">
         <!--Header-->
         <div class="modal-header text-center pb-4">
           <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLogin"><strong>SIGN</strong> <a
@@ -58,7 +58,7 @@
             <!--Grid column-->
             <div class="text-center mb-3 col-md-12" >
               <a ></a>
-              <button type="button" class=" btn btn-success btn-block z-depth-1" style="border-radius: 20px;">Procurar</button>
+              <button type="button" class=" btn btn-success btn-block z-depth-1" style="border-radius: 10px;">Procurar</button>
             </div>
             <!--Grid column-->
 
@@ -70,7 +70,7 @@
 
             <!--Grid column-->
             <div class="modal-footer">
-		       <button class="btn btn-outline-primary waves-effect" style="border-radius: 20px;">Cadastro</button>
+		       <button class="btn btn-outline-primary waves-effect" style="border-radius: 10px;">Cadastro</button>
 		    </div>
             <!--Grid column-->
 
@@ -93,15 +93,15 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for="nome_cliente">Nome completo</label>
-				<input type="text" class="form-control" style="border-radius: 15px" id="nome_cliente" name="nome_cliente" required placeholder="Nome completo">
+				<input type="text" class="form-control" style="border-radius: 10px" id="nome_cliente" name="nome_cliente" required placeholder="Nome completo">
 			</div>
 			<div class="form-group col-md-6">
 				<label for="Niki_name">Nome de cliente</label>
 				<div class="input-group">
 					<div class="input-group-prepend">
-						<div class="input-group-text" style="border-radius: 15px">@</div>
+						<div class="input-group-text" style="border-radius: 10px">@</div>
 					</div>
-					<input type="text" class="form-control"style="border-radius: 15px"  id="Niki_name" maxlength="10" name="Niki_name" required placeholder="Nome de cliente">
+					<input type="text" class="form-control"style="border-radius: 10px"  id="Niki_name" maxlength="10" name="Niki_name" required placeholder="Nome de cliente">
 				</div>
 			</div>
 		</div>
@@ -109,34 +109,34 @@
 			<div class="form-group col-md-6">
 				<div>
 					<label for="cpf_cliente">CPF</label>
-					<input pattern="\d{[0-9.]}\.\d{[0-9.]}\.\d{[0-9.]}-\d{[0-9.]}" style="border-radius: 15px" type="text" id="cpf" maxlength="14" name="cpf_cliente" class="form-control" placeholder="digite apenas os números" onkeypress="return isNumberKey(event)">
+					<input pattern="\d{[0-9.]}\.\d{[0-9.]}\.\d{[0-9.]}-\d{[0-9.]}" style="border-radius: 10px" type="text" id="cpf" maxlength="14" name="cpf_cliente" class="form-control" placeholder="digite apenas os números" onkeypress="return isNumberKey(event)">
 				</div>
 			</div>
 			<div class="form-group col-md-6">
 				<div>
 					<label for="tel_cliente">Telefone</label>
-					<input style="border-radius: 15px" type="text" id="tel_cliente" maxlength="20" name="tel_cliente" class="form-control" placeholder="digite apenas os números">
+					<input style="border-radius: 10px" type="text" id="tel_cliente" maxlength="20" name="tel_cliente" class="form-control" placeholder="digite apenas os números">
 				</div>
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for="email_cliente">E-mail</label>
-				<input type="email" class="form-control" id="email_cliente" maxlength="40" name="email_cliente" required placeholder="email" style="border-radius: 15px">
+				<input type="email" class="form-control" id="email_cliente" maxlength="40" name="email_cliente" required placeholder="email" style="border-radius: 10px">
 			</div>
 			<div class="form-group col-md-6">
 				<label for="senha_cliente">Senha</label>
-				<input type="password" class="form-control" style="border-radius: 15px" id="senha_cliente" maxlength="40" name="senha_cliente" required placeholder="Senha">
+				<input type="password" class="form-control" style="border-radius: 10px" id="senha_cliente" maxlength="40" name="senha_cliente" required placeholder="Senha">
 			</div>
 		</div>
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for="cidade">Cidade</label>
-				<input type="text" class="form-control" style="border-radius: 15px" id="cidade" maxlength="40" name="cidade" placeholder="Ex: Brasília">
+				<input type="text" class="form-control" style="border-radius: 10px" id="cidade" maxlength="40" name="cidade" placeholder="Ex: Brasília">
 			</div>
 			<div class="form-group col-md-6">
 				<label for="estado" >Estado</label>
-				<select id="estado" name="estado" class="form-control" style="border-radius: 15px">
+				<select id="estado" name="estado" class="form-control" style="border-radius: 10px">
 					<option value="AC">Acre</option>
 					<option value="AL">Alagoas</option>
 					<option value="AP">Amapá</option>
@@ -170,7 +170,7 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for="aparelho">Aparelho</label>
-				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 15px" >
+				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 10px" >
 					<option value="mobile">Mobile</option>
 					<option value="computadores">Computadores</option>
 					<option value="outros">Outros</option>
@@ -178,7 +178,7 @@
 			</div>
 			<div class="form-group col-md-6">
 				<label for="aparelho">Tipo</label>
-				<select class="form-control" name="aparelho" id="tipo" style="border-radius: 15px">
+				<select class="form-control" name="aparelho" id="tipo" style="border-radius: 10px">
 					<option value="notebook">Notebook</option>
 					<option value="desktop">Desktop</option>
 					<option value="celular">Celular</option>
@@ -189,7 +189,7 @@
 		<div class="form-row">
 			<div class="form-group col-md-6">
 				<label for="aparelho">Marca</label>
-				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 15px">
+				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 10px">
 					<option value="">...</option>
 					<?php while($row = $res->fetch_assoc()): ?>
 						<option value=<?= $row['id_marca'] ?>><?= $row['marca'] ?></option>
@@ -199,15 +199,15 @@
 			<div class="form-group col-md-6">
 				<label for="modelo">Modelo</label>
 				<div class="input-group">
-					<input type="text" class="form-control" id="modleo" maxlength="40" name="modelo" style="border-radius: 15px" required placeholder="Ex:XT-1033">
+					<input type="text" class="form-control" id="modleo" maxlength="40" name="modelo" style="border-radius: 10px" required placeholder="Ex:XT-1033">
 				</div>
 			</div>
 		</div>
 		<div class="form-group">
 			<label for="descricao">Descrição</label>
-			<textarea class="form-control" style="border-radius: 15px" id="descricao" rows="3" name="descricao" required placeholder="Digite aqui a descrição do aparelho e o problema a ser solucionado"></textarea>
+			<textarea class="form-control" style="border-radius: 10px" id="descricao" rows="3" name="descricao" required placeholder="Digite aqui a descrição do aparelho e o problema a ser solucionado"></textarea>
 		</div>
 	</div>
-	<button type="submit" style="border-radius: 15px" class="btn blue-gradient">Cadastrar</button>
+	<button type="submit" style="border-radius: 10px" class="btn blue-gradient">Cadastrar</button>
 </form>
 </div>
