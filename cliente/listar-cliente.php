@@ -144,6 +144,7 @@
         alert("message");
       }
       else{
+        $("#Resultado").html("");
         $("#Resultado").append("<tr>"+
                                   "<th scope=\"row\">"+
                                   "<td>"+$.trim(val["nome"])+"</td>"+
@@ -171,5 +172,6 @@
     location.reload();
     
   });
+
   
 </script>
