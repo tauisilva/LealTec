@@ -64,7 +64,7 @@
                 
                 $pesq = $conn->Consultas($strConsulta);
 
-                $retRow = $pesq->fetch_assoc();
+                $retRow = $pesq->fetch_All(MYSQLI_ASSOC);
                 echo json_encode($retRow);
 
             }catch(Exception $e){
