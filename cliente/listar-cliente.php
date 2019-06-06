@@ -74,7 +74,7 @@
             <label for="consulta" style="font-size: 14pt; ">Pesquisar Cliente</label>&nbsp;
           </td>
           <td>
-            <input type="text" id="consulta" size="100%" class="form-control" required>
+            <input type="text" id="strConsulta" size="100%" class="form-control" required>
           </td>
         </tr>
       </table>
@@ -134,7 +134,7 @@
       data: {
         
         acao: "Consultar",
-        consulta: $("#consulta").val()
+        consulta: $("#strConsulta").val()
 
       },
       success: function(val) {
