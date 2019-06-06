@@ -74,7 +74,7 @@
             <label for="consulta" style="font-size: 14pt; ">Pesquisar Cliente</label>&nbsp;
           </td>
           <td>
-            <input type="text" id="consulta" size="100%" class="form-control" required>
+            <input type="text" id="strConsulta" size="100%" class="form-control" required>
           </td>
         </tr>
       </table>
@@ -126,42 +126,36 @@
   });
 
   $("#btnConsultar").click(function(){
-
     $.ajax({
-
-      url: "<?= PROC ?>",
       type: "POST",
+      url: "<?= PROC ?>",
       dataType: "json",
+      cache: false,
+      data: {
+        
+        acao: "Consultar",
+        consulta: $("#strConsulta").val()
 
-      data:{
-
-        acao: "Cosultar",
-        consulta: $("#consulta").val()
-
-      }
-    }).done(function(val){
-      if(val["error"]){
-        alert("message");
-      }
-      else{
+      },
+      success: function(val) {
         $("#Resultado").html("");
-        $("#Resultado").append("<tr>"+
-                                  "<th scope=\"row\">"+
-                                  "<td>"+$.trim(val["nome"])+"</td>"+
-                                  "<td>"+$.trim(val["cpf"])+"</td>"+
-                                  "<td>"+$.trim(val["numero"])+"</td>"+
-                                  "<td>"+$.trim(val["endereco"])+"</td>"+
-                                  "<td>"+
-                                    "<a id=\"btnDeletar\" data-id='"+$.trim(val["id"])+"'>"+
-                                      "<i class=\"fas fa-times\"></i>"+
-                                    "</a>"+
-                                  "</td>"+
-                                "</tr>");
+        for(x in val){
+          $("#Resultado").append("<tr>"+
+                                    "<th scope=\"row\">"+
+                                    "<td>"+$.trim(val[x]["nome"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["cpf"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["numero"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["endereco"])+"</td>"+
+                                    "<td>"+
+                                      "<a id=\"btnDeletar\" data-id='"+$.trim(val["id"])+"'>"+
+                                        "<i class=\"fas fa-times\"></i>"+
+                                      "</a>"+
+                                    "</td>"+
+                                  "</tr>");
+        }
+                                
       }
-    }).fail(function(x, status, val){
-      alert(val);
     });
-    
   });
 
   $("#btnVoltar").click(function(){
