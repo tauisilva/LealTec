@@ -92,6 +92,47 @@
 
 <script type="text/javascript">
 
+  $("#modalLisCliente").on("hide.bs.modal", function(e){
+    <?php $_SESSION["modal"] = "#cliente"; ?>
+    location.reload();
+  });
+
+  $("#btnConsultar").click(function(){
+    $.ajax({
+      type: "POST",
+      url: "<?= PROC ?>",
+      dataType: "json",
+      cache: false,
+      data: {
+        
+        acao: "Consultar",
+        consulta: $("#strConsulta").val()
+
+      },
+      success: function(val) {
+        $("#Resultado").html("");
+        
+        var count = 1;
+
+        for(x in val){
+          $("#Resultado").append("<tr>"+
+                                    "<th scope=\"row\">"+(count++)+"</th>"+
+                                    "<td>"+$.trim(val[x]["nome"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["cpf"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["numero"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["endereco"])+"</td>"+
+                                    "<td>"+
+                                      "<a id=\"btnDeletar\" data-id='"+val[x]["id"]+"'>"+
+                                        "<i class=\"fas fa-times\"></i>"+
+                                      "</a>"+
+                                    "</td>"+
+                                  "</tr>");
+        }
+                                
+      }
+    });
+  });
+
   $("a[id='btnDeletar']").click(function(){
 
     var ret = confirm("Deseja realmente excluir esse cliente?");
@@ -122,40 +163,7 @@
       });
 
     }
-    
-  });
 
-  $("#btnConsultar").click(function(){
-    $.ajax({
-      type: "POST",
-      url: "<?= PROC ?>",
-      dataType: "json",
-      cache: false,
-      data: {
-        
-        acao: "Consultar",
-        consulta: $("#strConsulta").val()
-
-      },
-      success: function(val) {
-        $("#Resultado").html("");
-        for(x in val){
-          $("#Resultado").append("<tr>"+
-                                    "<th scope=\"row\">"+
-                                    "<td>"+$.trim(val[x]["nome"])+"</td>"+
-                                    "<td>"+$.trim(val[x]["cpf"])+"</td>"+
-                                    "<td>"+$.trim(val[x]["numero"])+"</td>"+
-                                    "<td>"+$.trim(val[x]["endereco"])+"</td>"+
-                                    "<td>"+
-                                      "<a id=\"btnDeletar\" data-id='"+$.trim(val["id"])+"'>"+
-                                        "<i class=\"fas fa-times\"></i>"+
-                                      "</a>"+
-                                    "</td>"+
-                                  "</tr>");
-        }
-                                
-      }
-    });
   });
 
   $("#btnVoltar").click(function(){
