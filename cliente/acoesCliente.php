@@ -10,7 +10,54 @@
     switch($acao){
 
         case 'Inserir':
-            //code
+            try {
+                $nome = trim($_POST["nome"]);
+                $endereco = trim($_POST["endereco"]);
+                $telefone = trim($_POST["telefone"]);
+                $cpf = trim($_POST["cpf"]);
+
+                $conn = new Conexao();
+                
+                /*
+                $strConsulta = "SELECT * FROM ".TABPESSOA.
+                " WHERE cpf = '$cpf'";
+
+                if($strConsulta->num_rows() >= 1){
+
+                    $ret = array("error" => true, "message" => "O CPF informado já existe na base de dados");
+
+                    echo json_encode($ret);
+                    die();
+                    
+                }
+                */
+                
+                $strTelefone = "INSERT INTO ".TABTELEFONE."(id_tel, numero) VALUES(DEFAULT, '$telefone');";
+                $strConsulta = "SELECT MAX(id_tel) AS tel FROM ". TABTELEFONE;
+
+                $conn->Insercao($strTelefone);
+                $tel = $conn->Consultas($strConsulta);
+                $tel = $tel->fetch_Assoc();
+
+                $strPessoa = "INSERT INTO ".TABPESSOA."(id_pessoa, cpf, nome, numero) VALUES(DEFAULT, '$cpf', '$nome', '".$tel['tel']."' );";
+                $strConsulta = "SELECT MAX(id_pessoa) AS pessoa FROM ". TABPESSOA;
+
+                $conn->Insercao($strPessoa);
+                $pessoa = $conn->Consultas($strConsulta);
+                $pessoa = $pessoa->fetch_Assoc();
+                
+                $strCliente= "INSERT INTO ".TABCLIENTE."(id_cliente, pessoa, endereco) VALUES(DEFAULT, '".$pessoa['pessoa']."', '$endereco');";
+
+                $conn->Insercao($strCliente);
+
+            } catch (Exception $e) {
+                
+                $ret = array("error" => true, "message" => "Ocorreu um erro ao gravar os dados do cliente ");
+                
+                echo json_encode($ret);
+
+            }
+
             break;
         
         case 'Deletar':

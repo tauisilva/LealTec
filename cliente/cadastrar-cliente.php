@@ -1,40 +1,20 @@
 <?php
+	session_start();
+	require_once("../conexao.class.php");
 
-	include_once("conexao.class.php");
-
-	try {
-		
-		$conn = new Conexao();
-
-		$sql = "SELECT * from Marca order by marca asc";
-		$res = $conn->Consultas($sql);
-
-	} catch (Exception $e) {
-		
-		die(print $e->getMenssagem());
-
-	}
+	define("PROC", "cliente/acoesCliente.php");
 
 ?>
-<style type="text/css">
-	.container{
-		background-image: linear-gradient(60deg, #FFF 0%, #2b76b9 37%, #35eb93 65%, #2cacd1 100%);
-		border-radius: 10px;
-	}
-
-</style>
-<!--------------------------------------------------------------------------------------------------------------------- Modal Cadastro -------------------------------------------------------------------------------------------------------->
-
-<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLogin"
-  aria-hidden="true" >
+<div class="modal fade" id="modalCadastrar" tabindex="-1" role="dialog" aria-labelledby="myModalCadastrar"
+  aria-hidden="true" action="index.php?page=sal-cliente">
   <div class="modal-dialog form-dark" role="document">
     <!--Content-->
     <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 10px;">
       <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 10px;">
         <!--Header-->
         <div class="modal-header text-center pb-4">
-          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLogin"><strong>SIGN</strong> <a
-              class="green-text font-weight-bold"><strong> UP</strong></a></h3>
+          <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalCadastrar"><a
+              class="green-text font-weight-bold"><strong>Cadastro</strong></a></h3>
           <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -43,40 +23,29 @@
         <div class="modal-body">
           <!--Body-->
           <div class="md-form mb-5">
-            <input type="email" id="Form-email5" class="form-control validate white-text">
-            <label data-error="wrong" data-success="right" for="Form-email5">Nome</label>
+            <input type="text" id="nome_cliente" class="form-control white-text">
+            <label data-error="wrong" data-success="right" for="nome_cliente">Nome</label>
           </div>
-
+          <div class="md-form mb-5">
+            <input type="text" id="numero" class="form-control white-text" onkeypress="fMasc(this, mTel);" maxlength="14">
+            <label data-error="wrong" data-success="right" for="numero">Telefone</label>
+          </div>
+          <div class="md-form mb-5">
+            <input type="text" id="endereco" class="form-control white-text">
+            <label data-error="wrong" data-success="right" for="endereco">Endereço</label>
+          </div>
           <div class="md-form pb-3">
-            <input type="password" id="Form-pass5" class="form-control validate white-text">
-            <label data-error="wrong" data-success="right" for="Form-pass5">CPF</label>
+            <input type="text" id="cpf" class="form-control validate white-text" maxlength="14" onkeypress="fMasc(this, mCPF);">
+            <label data-error="wrong" data-success="right" for="cpf"maxlength="14">CPF</label>
           </div>
-
           <!--Grid row-->
           <div class="row d-flex align-items-center mb-4">
-
             <!--Grid column-->
             <div class="text-center mb-3 col-md-12" >
-              <a ></a>
-              <button type="button" class=" btn btn-success btn-block z-depth-1" style="border-radius: 10px;">Procurar</button>
+              <button type="button" id="btnCadastrar" class="btn btn-outline-success btn-block z-depth-1" style="border-radius: 10px;" data-toggle="modal">Cadastrar</button>
             </div>
             <!--Grid column-->
-
           </div>
-          <!--Grid row-->
-
-          <!--Grid row-->
-          <div class="row">
-
-            <!--Grid column-->
-            <div class="modal-footer">
-		       <button class="btn btn-outline-primary waves-effect" style="border-radius: 10px;">Cadastro</button>
-		    </div>
-            <!--Grid column-->
-
-          </div>
-          <!--Grid row-->
-
         </div>
       </div>
     </div>
@@ -84,130 +53,45 @@
   </div>
 </div>
 
-<!--------------------------------------------------------------------------------------------------------------------- Modal Cliente -------------------------------------------------------------------------------------------------------->
-<div class="container-fluid">
-	<h1>Cadastrar Cliente</h1>
-	<br>
-	<form action="index.php?page=sal-cliente" method="POST" id="form1">
-		<input type="hidden" name="acao" value="cadastrar">
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label for="nome_cliente">Nome completo</label>
-				<input type="text" class="form-control" style="border-radius: 10px" id="nome_cliente" name="nome_cliente" required placeholder="Nome completo">
-			</div>
-			<div class="form-group col-md-6">
-				<label for="Niki_name">Nome de cliente</label>
-				<div class="input-group">
-					<div class="input-group-prepend">
-						<div class="input-group-text" style="border-radius: 10px">@</div>
-					</div>
-					<input type="text" class="form-control"style="border-radius: 10px"  id="Niki_name" maxlength="10" name="Niki_name" required placeholder="Nome de cliente">
-				</div>
-			</div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<div>
-					<label for="cpf_cliente">CPF</label>
-					<input pattern="\d{[0-9.]}\.\d{[0-9.]}\.\d{[0-9.]}-\d{[0-9.]}" style="border-radius: 10px" type="text" id="cpf" maxlength="14" name="cpf_cliente" class="form-control" placeholder="digite apenas os números" onkeypress="return isNumberKey(event)">
-				</div>
-			</div>
-			<div class="form-group col-md-6">
-				<div>
-					<label for="tel_cliente">Telefone</label>
-					<input style="border-radius: 10px" type="text" id="tel_cliente" maxlength="20" name="tel_cliente" class="form-control" placeholder="digite apenas os números">
-				</div>
-			</div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label for="email_cliente">E-mail</label>
-				<input type="email" class="form-control" id="email_cliente" maxlength="40" name="email_cliente" required placeholder="email" style="border-radius: 10px">
-			</div>
-			<div class="form-group col-md-6">
-				<label for="senha_cliente">Senha</label>
-				<input type="password" class="form-control" style="border-radius: 10px" id="senha_cliente" maxlength="40" name="senha_cliente" required placeholder="Senha">
-			</div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label for="cidade">Cidade</label>
-				<input type="text" class="form-control" style="border-radius: 10px" id="cidade" maxlength="40" name="cidade" placeholder="Ex: Brasília">
-			</div>
-			<div class="form-group col-md-6">
-				<label for="estado" >Estado</label>
-				<select id="estado" name="estado" class="form-control" style="border-radius: 10px">
-					<option value="AC">Acre</option>
-					<option value="AL">Alagoas</option>
-					<option value="AP">Amapá</option>
-					<option value="AM">Amazonas</option>
-					<option value="BA">Bahia</option>
-					<option value="CE">Ceará</option>
-					<option value="DF" selected>Distrito Federal</option>
-					<option value="ES">Espírito Santo</option>
-					<option value="GO">Goiás</option>
-					<option value="MA">Maranhão</option>
-					<option value="MT">Mato Grosso</option>
-					<option value="MS">Mato Grosso do Sul</option>
-					<option value="MG">Minas Gerais</option>
-					<option value="PA">Pará</option>
-					<option value="PB">Paraíba</option>
-					<option value="PR">Paraná</option>
-					<option value="PE">Pernambuco</option>
-					<option value="PI">Piauí</option>
-					<option value="RJ">Rio de Janeiro</option>
-					<option value="RN">Rio Grande do Norte</option>
-					<option value="RS">Rio Grande do Sul</option>
-					<option value="RO">Rondônia</option>
-					<option value="RR">Roraima</option>
-					<option value="SC">Santa Catarina</option>
-					<option value="SP">São Paulo</option>
-					<option value="SE">Sergipe</option>
-					<option value="TO">Tocantins</option>
-				</select>
-			</div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label for="aparelho">Aparelho</label>
-				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 10px" >
-					<option value="mobile">Mobile</option>
-					<option value="computadores">Computadores</option>
-					<option value="outros">Outros</option>
-				</select>
-			</div>
-			<div class="form-group col-md-6">
-				<label for="aparelho">Tipo</label>
-				<select class="form-control" name="aparelho" id="tipo" style="border-radius: 10px">
-					<option value="notebook">Notebook</option>
-					<option value="desktop">Desktop</option>
-					<option value="celular">Celular</option>
-					<option value="tablet">Tablet</option>
-				</select>
-			</div>
-		</div>
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label for="aparelho">Marca</label>
-				<select class="form-control" name="aparelho" id="aparelho" style="border-radius: 10px">
-					<option value="">...</option>
-					<?php while($row = $res->fetch_assoc()): ?>
-						<option value=<?= $row['id_marca'] ?>><?= $row['marca'] ?></option>
-					<?php endwhile; ?>	
-				</select>
-			</div>
-			<div class="form-group col-md-6">
-				<label for="modelo">Modelo</label>
-				<div class="input-group">
-					<input type="text" class="form-control" id="modleo" maxlength="40" name="modelo" style="border-radius: 10px" required placeholder="Ex:XT-1033">
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="descricao">Descrição</label>
-			<textarea class="form-control" style="border-radius: 10px" id="descricao" rows="3" name="descricao" required placeholder="Digite aqui a descrição do aparelho e o problema a ser solucionado"></textarea>
-		</div>
-	</div>
-	<button type="submit" style="border-radius: 10px" class="btn blue-gradient">Cadastrar</button>
-</form>
-</div>
+<script type="text/javascript" src="js/formatNum.js"></script>
+<script type="text/javascript">
+
+	$("#modalCadastrar").on("hide.bs.modal", function(e){
+		<?php $_SESSION["modal"] = "#cliente"; ?>
+		location.reload();
+	});
+
+	$("#btnCadastrar").click(function(){
+
+		var nomeCliente = $("#nome_cliente").val();
+
+		$.ajax({
+
+		url: "<?= PROC ?>",
+		type: "POST",
+
+		data:{
+
+			acao: "Inserir",
+			nome: nomeCliente,
+			telefone: $("#numero").val(),
+			endereco: $("#endereco").val(),
+			cpf: $("#cpf").val()
+		}
+		}).done(function(val){
+			if(val["error"]){
+				alert(val["message"] + nomeCliente + ". Contate os desevolvedores do sistema!");
+			}
+			else{
+				alert("Cliente "+nomeCliente+", cadastrado com sucesso!");
+				$("#nome_cliente").val(null);
+				$("#numero").val(null);
+				$("#endereco").val(null);
+				$("#cpf").val(null);
+			}
+		}).fail(function(x, status, val){
+			alert(val);
+		});
+	});
+	
+</script>

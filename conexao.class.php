@@ -13,8 +13,9 @@ class Conexao extends Exception{
             $pass = "";
             $db = "LealTec";
             
-            @$this->strConn = new mysqli($host, $user, $pass, $db);
+            $this->strConn = new mysqli($host, $user, $pass, $db);
             $this->strConn->query('SET character_set_results=utf8');
+            $this->strConn->query("SET NAMES 'utf8'");
 
         } catch (Exception $e) {
             
