@@ -24,6 +24,7 @@ class Conexao extends Exception{
         }
     }
 
+    
     function Consultas($sql){
         try{
 
@@ -82,6 +83,29 @@ class Conexao extends Exception{
 
         } catch (Exception $e) {
             throw new Exception("Erro ao tentar realizar exclusão", 1);
+        }
+    }
+    function Atualiza($sql){
+        try{
+
+            return $this->strConn->query($sql);
+
+        }catch(Exception $e){
+            
+            throw new Exception("Erro ao tentar realizar a operação", 1);
+            
+        }
+    }
+    function AtualizaMult($sql){
+        try{
+
+            $this->strConn->query($sql);
+            return true;
+
+        }catch(Exception $e){
+            
+            throw new Exception("Erro ao tentar realizar a operação", 1);
+            
         }
     }
 }
