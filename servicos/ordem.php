@@ -15,24 +15,24 @@ aria-hidden="true">
     <div class="modal-body mx-4">
       <!--Body-->
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-        <label class="custom-control-label" for="defaultInline1">Celular</label>
+        <input type="radio" class="custom-control-input" id="defaultCelular" name="inlineDefaultRadiosExample">
+        <label class="custom-control-label" for="defaultCelular">Celular</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-        <label class="custom-control-label" for="defaultInline2">Computador</label>
+        <input type="radio" class="custom-control-input" id="defaultComputador" name="inlineDefaultRadiosExample">
+        <label class="custom-control-label" for="defaultComputador">Computador</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-        <label class="custom-control-label" for="defaultInline3">Notebook</label>
+        <input type="radio" class="custom-control-input" id="defaultNotebook" name="inlineDefaultRadiosExample">
+        <label class="custom-control-label" for="defaultNotebook">Notebook</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
-        <label class="custom-control-label" for="defaultInline4">Tablet</label>
+        <input type="radio" class="custom-control-input" id="defaultTablet" name="inlineDefaultRadiosExample">
+        <label class="custom-control-label" for="defaultTablet">Tablet</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
-        <label class="custom-control-label" for="defaultInline5">Outros</label>
+        <input type="radio" class="custom-control-input" id="defaultOutros" name="inlineDefaultRadiosExample">
+        <label class="custom-control-label" for="defaultOutros">Outros</label>
       </div>
       <div class="form-row">
         <div class="md-form col-md-6">
@@ -57,24 +57,40 @@ aria-hidden="true">
       <div class="form-row">
         <div class="md-form col-md-6">
           <input type="text" id="Form-val" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-val">Valor</label>
+          <label data-error="wrong" data-success="right" for="Form-val">R$</label>
         </div>
         <div class="md-form col-md-6">
           <input type="text" id="Form-disp" class="form-control validate">
           <label data-error="wrong" data-success="right" for="Form-disp">Dispositivo</label>
         </div>
       </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend" >
+          <label class="input-group-text " for="inputGroupSelect01" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;" >Marca</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" >
+          <option selected>Escolha uma opção...</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
       <div class="md-form">
         <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
         <label for="materialContactFormMessage">Descrição</label>
+      </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="defaultemail" name="inlineDefaultRadiosExample">
+        <label class="custom-control-label" for="defaultemail">Enviar por email?</label>
       </div>
     </div>
     
     <!--Footer-->
     <div class="modal-footer mx-4 pt-2 mb-1">            
-      <button type="button" class="btn btn-outline-success waves-effect btn-sm" data-dismiss="modal" style="border-radius: 10px;">Sair</button>
-      <button type="button" class="btn btn-outline-danger waves-effect btn-sm" style="border-radius: 10px;">Salvar Ordem</button>
+      <button type="button" class="btn btn-outline-success waves-effect btn-sm" data-dismiss="modal" style="border-radius: 40px;">Sair</button>
+      <button type="button" class="btn btn-outline-danger waves-effect btn-sm" style="border-radius: 40px;">Salvar Ordem</button>
     </div>
+
   </div>
   <!--/.Content-->
 </div>

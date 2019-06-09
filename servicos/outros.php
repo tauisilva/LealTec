@@ -18,13 +18,13 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modaletc"style="border-radius: 10px;">Etc</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modaletc"style="border-radius: 30px;">Etc</button>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-        <button type="button"class="btn btn-outline-danger waves-effect" style="border-radius: 10px;" data-dismiss="modal">Close</button>
-        <button class="btn btn-outline-success waves-effect z-depth-1" style="border-radius: 10px;" data-toggle="modal" data-target="#modalOrdem" data-dismiss="modal">Novo Serviço</button>
+        <button type="button"class="btn btn-outline-danger waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal">Close</button>
+        <button class="btn btn-outline-success waves-effect z-depth-1 btn-sm" style="border-radius: 40px;" data-toggle="modal" data-target="#modalOrdem" data-dismiss="modal">Novo Serviço</button>
       </div>
       </div>
     </div>
@@ -35,14 +35,19 @@
 <?php include("ordem.php");?>
 <div class="modal fade" id="modaletc" tabindex="-1" role="dialog" aria-labelledby="modaletcLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-fluid" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content" style="border-radius: 10px;">
       <!--Header-->
-      <div class="modal-header" style="background-image: linear-gradient(to right, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%); border-top-right-radius:  10px; border-top-left-radius: 10px;">
-        <h4 class="modal-title white-text" id="myModaletc">etc</h4>
+      <div class="modal-header" style="border-top-right-radius:  10px; border-top-left-radius: 10px;">
+        <h4 class="modal-title" id="myModaletc">Etc</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
+      </div>
+      <div class="container-fluid">
+        <div class="md-form mt-0 ">
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      </div>
       </div>
       <!--Body-->
       <div class="modal-body">
@@ -51,9 +56,9 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Product name</th>
+              <th></th>
               <th>Price</th>
-              <th>Remove</th>
+              <th>Excluir</th>
             </tr>
           </thead>
           <tbody>
@@ -89,12 +94,11 @@
             </tr>
           </tbody>
         </table>
-
       </div>
       <!--Footer-->
       <div class="modal-footer">
-        <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 10px;" data-dismiss="modal" data-target="#modalOutros">voltar</button>
-        <button class="btn btn-outline-primary waves-effect" style="border-radius: 10px;">Checkout</button>
+        <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal" data-target="#modalOutros">voltar</button>
+        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Checkout</button>
       </div>
     </div>
   </div>
