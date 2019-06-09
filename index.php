@@ -46,6 +46,7 @@
   
     <?php include("config.php"); ?>
 
+  <script type="text/javascript" src="js/formatNum.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
   <script type="text/javascript" src="funcionario/admin/js/popper.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>

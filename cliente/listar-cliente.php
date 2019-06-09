@@ -44,8 +44,8 @@
               <th>Nome</th>
               <th>CPF</th>
               <th>Numero</th>
-              <td>Endereço</td>
-              <td>Ação</td>
+              <th>Endereço</th>
+              <th colspan="2" style="text-align: center;">Ações</th>
             </tr>
           </thead>
           <tbody id="Resultado">
@@ -55,7 +55,12 @@
                 <td><?= trim($row["nome"]) ?></td>
                 <td><?= trim($row["cpf"]) ?></td>
                 <td><?= trim($row["numero"]) ?></td>
-                <td><?= trim($row["endereco"]) ?></td>  
+                <td><?= trim($row["endereco"]) ?></td>
+                <td>
+                  <a id="btnEditar" data-id=<?= $row["id"]?>>
+                  <i class="far fa-edit"></i>
+                  </a>
+                </td>  
                 <td>
                   <a id="btnDeletar" data-id=<?= $row["id"] ?>>
                     <i class="fas fa-times"></i>
@@ -68,10 +73,10 @@
 
       <br>
 
-      <table>
+      <table id="Pesquisa">
         <tr>
           <td>
-            <label for="consulta" style="font-size: 14pt; ">Pesquisar Cliente</label>&nbsp;
+            <label for="strConsulta" style="font-size: 14pt; ">Pesquisar Cliente</label>&nbsp;
           </td>
           <td>
             <input type="text" id="strConsulta" size="100%" class="form-control" required>
@@ -122,6 +127,11 @@
                                     "<td>"+$.trim(val[x]["numero"])+"</td>"+
                                     "<td>"+$.trim(val[x]["endereco"])+"</td>"+
                                     "<td>"+
+                                      "<a id=\"btnEditar\" data-id='"+val[x]["id"]+"'>"+
+                                        "<i class=\"far fa-edit\"></i>"+
+                                      "</a>"+
+                                    "</td>"+
+                                    "<td>"+
                                       "<a id=\"btnDeletar\" data-id='"+val[x]["id"]+"'>"+
                                         "<i class=\"fas fa-times\"></i>"+
                                       "</a>"+
@@ -133,7 +143,8 @@
     });
   });
 
-  $("a[id='btnDeletar']").click(function(){
+  $("body").delegate("a[id='btnDeletar']", "click", function(){
+  //$("a[id='btnDeletar']").click(function(){
 
     var ret = confirm("Deseja realmente excluir esse cliente?");
 
@@ -165,6 +176,79 @@
     }
 
   });
+/*
+  $("body").delegate("a[id='btnEditar']", "click", function(){
+  //$("a[id='btnEditar']").click(function(){
+    $.ajax({
+
+        url: "<?= PROC ?>",
+        type: "POST",
+        dataType: "json",
+
+        data:{
+
+          acao: "Editar",
+          idCliente: $(this).attr("data-id")
+        },
+        success: function(val) {
+          $("#Pesquisa").html("");
+          $("#Resultado").html("");
+          $("#Resultado").html("<tr>"+
+                "<th scope=\"row\"></th>"+
+                "<td>"+
+                  "<input type=\"text\ id=\"nome_cliente\" class=\"form-control\" value='"+val["nome"]+"' required>"+
+                "</td>"+
+                "<td>"+
+                  "<input type=\"text\" id=\"CPF\" class=\"form-control\" maxlength=\"14\" onkeypress=\"fMasc(this, mCPF)\" value='"+val["cpf"]+"' required>"+
+                "</td>"+
+                "<td>"+
+                  "<input type=\"text\" id=\"numero\" class=\"form-control\" maxlength=\"14\" onkeypress=\"fMasc(this, mTel)\" value='"+val["numero"]+"' required>"+
+                "</td>"+
+                "<td>"+
+                  "<input type=\"text\" id=\"endereco\" class=\"form-control\" value='"+val["endereco"]+"' required>"+
+                "</td>"+
+                "<td>"+
+                  "<a id=\"btnSalvar\" colspan=\"2\" style=\"text-align: right;\"data-id='"+val["id"]+"'>"+
+                    "<i class=\"fas fa-redo-alt\"></i>"+
+                  "</a>"+
+                "</td>"+
+              "</tr>");
+        }
+    }).done(function(val){
+      if(val["error"])
+        alert(val["message"]);
+    }).fail(function(x, status, val){
+      alert(val);
+    });
+  });
+*/
+  $("body").delegate("#btnSalvar", "click", function(){
+    $.ajax({
+
+      url: "<?= PROC ?>",
+      type: "POST",
+      dataType: "json",
+
+      data:{
+
+        acao: "Atualizar",
+        idCliente: $(this).attr(),
+        nome: $("#nome_cliente").val(),
+        cpf: $("#CPF").val(),
+        endereco:$("#endereco").val(),
+        numero: $("#numero").val()
+      }
+    }).done(function(){
+      if(val["error"]){
+        alert(val["message"]);
+      }
+      else{
+
+      }
+    }).fail(function(x, status, val){
+      alert(val);
+    });
+  });
 
   $("#btnVoltar").click(function(){
 
@@ -174,6 +258,5 @@
     location.reload();
     
   });
-
   
 </script>

@@ -53,7 +53,6 @@
   </div>
 </div>
 
-<script type="text/javascript" src="js/formatNum.js"></script>
 <script type="text/javascript">
 
 	$("#modalCadastrar").on("hide.bs.modal", function(e){
