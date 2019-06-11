@@ -8,9 +8,9 @@
 <!-- Modal Tecnico  --> 
 <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLogin"
   aria-hidden="true" >
-  <div class="modal-dialog form-dark" role="document">
+  <div class="modal-dialog form-dark modal-side modal-bottom-right" role="document">
     <!--Content-->
-    <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 10px;">
+    <div class="modal-content card card-image" style="background-image: url('img/admin.jpg'); border-radius: 10px;">
       <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 10px;">
         <!--Header-->
         <div class="modal-header text-center pb-4">
@@ -39,7 +39,7 @@
               <!--Grid column-->
               <div class="text-center mb-3 col-md-12" >
                 <a ></a>
-                <button type="submit" id="btnLogar" class=" btn btn-success btn-block z-depth-1" style="border-radius: 10px;">Logar</button>
+                <button type="submit" id="btnLogar" class=" btn btn-success btn-block z-depth-1" style="border-radius: 40px;">Logar</button>
               </div>
             </form>
             

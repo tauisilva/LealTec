@@ -30,8 +30,13 @@
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cliente
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="index.php?page=edi-cliente">Editar</a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
@@ -41,7 +46,7 @@
         <li class="nav-item avatar dropdown">
           <a class="nav-link p-0" href="../../login/logout.php" >
             <img src="jackson.jpg" class="rounded-circle z-depth-0" alt="avatar image" height="35">
-            <button type="button" class="btn btn-primary btn-rouded btn-sm waves-effect waves-light" style="border-radius: 10px;" data-toggle="modal" data-target="basicExampleModal"><i class="fas fa-sign-out-alt"></i></button>
+            <button type="button" class="btn btn-primary btn-rouded btn-sm waves-effect waves-light" style="border-radius: 40px;" data-toggle="modal" data-target="basicExampleModal"><i class="fas fa-sign-out-alt"></i></button>
           </a>
         </li>
       </ul>

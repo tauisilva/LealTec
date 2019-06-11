@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div class="modal fade" id="modalOrdem" tabindex="-1" role="dialog" aria-labelledby="myModalOrdem"
 aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document">
+<div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
   <!--Content-->
   <div class="modal-content form-elegant" style="border-radius: 10px;">
     <!--Header-->
@@ -63,17 +63,6 @@ aria-hidden="true">
           <input type="text" id="Form-disp" class="form-control validate">
           <label data-error="wrong" data-success="right" for="Form-disp">Dispositivo</label>
         </div>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend" >
-          <label class="input-group-text " for="inputGroupSelect01" style="border-bottom-left-radius: 10px; border-top-left-radius: 10px;" >Marca</label>
-        </div>
-        <select class="custom-select" id="inputGroupSelect01" >
-          <option selected>Escolha uma opção...</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
       </div>
       <div class="md-form">
         <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>

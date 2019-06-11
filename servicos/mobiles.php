@@ -39,7 +39,7 @@
 <!-- Modal: Smartphones -->
 <div class="modal fade" id="modalSmartphones" tabindex="-1" role="dialog" aria-labelledby="modalSmartphonesLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
     <div class="modal-content" style="border-radius: 10px;">
       <!--Header-->
       <div class="modal-header" style="border-top-right-radius:  10px; border-top-left-radius: 10px;">
@@ -60,9 +60,10 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Product name</th>
-              <th>Price</th>
-              <th>Remove</th>
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Apagar</th>
+              <th>Descrição</th>
             </tr>
           </thead>
           <tbody>
@@ -103,7 +104,7 @@
       <!--Footer-->
       <div class="modal-footer">
         <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal" data-target="#modalServicos">voltar</button>
-        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Checkout</button>
+        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Procurar</button>
       </div>
     </div>
   </div>
@@ -113,7 +114,7 @@
 <!-- Modal: Tablets -->
 <div class="modal fade" id="modalTablets" tabindex="-1" role="dialog" aria-labelledby="modalTabletsLabel"
   aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
     <div class="modal-content" style="border-radius: 10px;">
       <!--Header-->
       <div class="modal-header" style="border-top-right-radius:  10px; border-top-left-radius: 10px;">
@@ -177,7 +178,7 @@
       <!--Footer-->
       <div class="modal-footer">
         <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal" data-target="#modalServicos">voltar</button>
-        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Checkout</button>
+        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Procurar</button>
       </div>
     </div>
   </div>
