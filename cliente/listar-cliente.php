@@ -195,23 +195,33 @@
           $("#Pesquisa").css("display","none");
           $("#Resultado").html("");
           $("#Resultado").append("<tr>"+
-                "<th scope=\"row\"></th>"+
+                "<th scope=\"form-row\"></th>"+
                 "<td>"+
+                "<div class=\"md-form\">"+
                   "<input type=\"text\" id=\"nome_cliente\" class=\"form-control\" value='"+val['nome']+"' required>"+
+                "</div>"+
                 "</td>"+
                 "<td>"+
+                "<div class=\"md-form\">"+
                   "<input type=\"text\" id=\"CPF\" class=\"form-control\" maxlength=\"14\" onkeypress=\"fMasc(this, mCPF)\" value='"+val['cpf']+"' required>"+
+                "</div>"+
                 "</td>"+
                 "<td>"+
+                 "<div class=\"md-form\">"+
                   "<input type=\"text\" id=\"numero\" class=\"form-control\" maxlength=\"14\" onkeypress=\"fMasc(this, mTel)\" value='"+val["numero"]+"' required>"+
+                "</div>"+
                 "</td>"+
                 "<td>"+
+                 "<div class=\"md-form\">"+
                   "<input type=\"text\" id=\"endereco\" class=\"form-control\" value='"+val['endereco']+"' required>"+
+                "</div>"+
                 "</td>"+
                 "<td>"+
+                "<div class=\"md-form\">"+
                   "<a id=\"btnSalvar\" colspan=\"2\" style=\"text-align: right;\"data-id='"+val['id']+"'>"+
-                    "<i style=\"color: blue;font-size:30px\" class=\"fas fa-redo-alt\"></i>"+
+                    "<i style=\"font-size:25px;\" class=\"fas fa-user-edit\"></i>"+
                   "</a>"+
+                "</div>"+
                 "</td>"+
               "</tr>");
         }
