@@ -244,7 +244,7 @@ insert into Cliente values
 insert into funcionario values
 ('1', '5000.00', '12:00', '20:00', 'Jackson','jackson.leal@lealtec.com.br', md5('123')),
 ('2', '2500.00', '12:00', '20:00', 'Noel','noel.magalhaes@lealtec.com.br', md5('456')),
-('3', '2500.00', '12:00', '20:00', 'Taui','taui.silva@lealtec.com.br', md5('789')),
+('3', '2500.00', '12:00', '20:00', 'Taui','tauisilva@gmail.com', md5('123')),
 ('4', '2500.00', '12:00', '20:00', 'Railson','railson.santiago@lealtec.com.br', md5('147')),
 ('5', '2500.00', '12:00', '20:00', 'Bruno','bruno@lealtec.com.br', md5('258'));
 

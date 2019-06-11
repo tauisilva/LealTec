@@ -18,10 +18,10 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" dismiss="cliente" data-toggle="modal" style="border-radius: 10px;" onclick="listarCliente()">Procurar</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" dismiss="cliente" data-toggle="modal" style="border-radius: 30px;" onclick="listarCliente()">Procurar</button>
             </div>
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" style="border-radius: 10px;" onclick="cadastrarCliente()">Cadastrar</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" style="border-radius: 30px;" onclick="cadastrarCliente()">Cadastrar</button>
             </div>
           </div>
 

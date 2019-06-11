@@ -9,8 +9,8 @@
   aria-hidden="true" action="index.php?page=sal-cliente">
   <div class="modal-dialog form-dark" role="document">
     <!--Content-->
-    <div class="modal-content card card-image" style="background-image: url('img/bg-showcase-1.jpg'); border-radius: 10px;">
-      <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 10px;">
+    <div class="modal-content card card-image" style="background-image: url('img/cadcliente.jpg'); border-radius: 10px;">
+      <div class="text-white rgba-stylish-strong px-3 z-depth-1" style="border-radius: 10px;">
         <!--Header-->
         <div class="modal-header text-center pb-4">
           <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalCadastrar"><a
@@ -42,7 +42,7 @@
           <div class="row d-flex align-items-center mb-4">
             <!--Grid column-->
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" id="btnCadastrar" class="btn btn-outline-success btn-block z-depth-1" style="border-radius: 10px;" data-toggle="modal">Cadastrar</button>
+              <button type="button" id="btnCadastrar" class="btn btn-outline-success btn-block z-depth-1" style="border-radius: 40px;" data-toggle="modal">Cadastrar</button>
             </div>
             <!--Grid column-->
           </div>
