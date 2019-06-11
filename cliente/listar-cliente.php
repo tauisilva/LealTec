@@ -76,7 +76,7 @@
       <table id="Pesquisa">
         <tr>
           <td>
-            <label for="strConsulta" style="font-size: 14pt; ">Pesquisar Cliente</label>&nbsp;
+            <label for="strConsulta" style="font-size: 14pt;">Pesquisar Cliente</label>&nbsp;
           </td>
           <td>
             <input type="text" id="strConsulta" size="100%" class="form-control" required>
@@ -87,7 +87,7 @@
       </div>
       <!--Footer-->
       <div class="modal-footer">
-      <button type="button"class="btn btn-outline-secondary waves-effect" style="border-radius: 10px;" id="btnVoltar">voltar</button>
+        <button type="button" class="btn btn-outline-secondary waves-effect" style="border-radius: 10px;" id="btnVoltar">voltar</button>
         <button type="button" id="btnConsultar" class="btn btn-outline-primary waves-effect" style="border-radius: 10px;">Consultar</button>
       </div>
     </div>
@@ -176,7 +176,7 @@
     }
 
   });
-/*
+
   $("body").delegate("a[id='btnEditar']", "click", function(){
   //$("a[id='btnEditar']").click(function(){
     $.ajax({
@@ -191,25 +191,27 @@
           idCliente: $(this).attr("data-id")
         },
         success: function(val) {
-          $("#Pesquisa").html("");
+          $("#strConsulta").val("");
+          $("#btnConsultar").css("display","none");
+          $("#Pesquisa").css("display","none");
           $("#Resultado").html("");
-          $("#Resultado").html("<tr>"+
+          $("#Resultado").append("<tr>"+
                 "<th scope=\"row\"></th>"+
                 "<td>"+
-                  "<input type=\"text\ id=\"nome_cliente\" class=\"form-control\" value='"+val["nome"]+"' required>"+
+                  "<input type=\"text\" id=\"nome_cliente\" class=\"form-control\" value='"+val['nome']+"' required>"+
                 "</td>"+
                 "<td>"+
-                  "<input type=\"text\" id=\"CPF\" class=\"form-control\" maxlength=\"14\" onkeypress=\"fMasc(this, mCPF)\" value='"+val["cpf"]+"' required>"+
+                  "<input type=\"text\" id=\"CPF\" class=\"form-control\" maxlength=\"14\" onkeypress=\"fMasc(this, mCPF)\" value='"+val['cpf']+"' required>"+
                 "</td>"+
                 "<td>"+
                   "<input type=\"text\" id=\"numero\" class=\"form-control\" maxlength=\"14\" onkeypress=\"fMasc(this, mTel)\" value='"+val["numero"]+"' required>"+
                 "</td>"+
                 "<td>"+
-                  "<input type=\"text\" id=\"endereco\" class=\"form-control\" value='"+val["endereco"]+"' required>"+
+                  "<input type=\"text\" id=\"endereco\" class=\"form-control\" value='"+val['endereco']+"' required>"+
                 "</td>"+
                 "<td>"+
-                  "<a id=\"btnSalvar\" colspan=\"2\" style=\"text-align: right;\"data-id='"+val["id"]+"'>"+
-                    "<i class=\"fas fa-redo-alt\"></i>"+
+                  "<a id=\"btnSalvar\" colspan=\"2\" style=\"text-align: right;\"data-id='"+val['id']+"'>"+
+                    "<i style=\"color: blue;font-size:30px\" class=\"fas fa-redo-alt\"></i>"+
                   "</a>"+
                 "</td>"+
               "</tr>");
@@ -221,10 +223,9 @@
       alert(val);
     });
   });
-*/
+
   $("body").delegate("#btnSalvar", "click", function(){
     $.ajax({
-
       url: "<?= PROC ?>",
       type: "POST",
       dataType: "json",
@@ -232,18 +233,47 @@
       data:{
 
         acao: "Atualizar",
-        idCliente: $(this).attr(),
+        idCliente: $(this).attr("data-id"),
         nome: $("#nome_cliente").val(),
         cpf: $("#CPF").val(),
         endereco:$("#endereco").val(),
         numero: $("#numero").val()
+      },
+      success: function(val) {
+        $("#Resultado").html("");
+        
+        var count = 1;
+
+        for(x in val){
+          $("#Resultado").append("<tr>"+
+                                    "<th scope=\"row\">"+(count++)+"</th>"+
+                                    "<td>"+$.trim(val[x]["nome"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["cpf"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["numero"])+"</td>"+
+                                    "<td>"+$.trim(val[x]["endereco"])+"</td>"+
+                                    "<td>"+
+                                      "<a id=\"btnEditar\" data-id='"+val[x]["id"]+"'>"+
+                                        "<i class=\"far fa-edit\"></i>"+
+                                      "</a>"+
+                                    "</td>"+
+                                    "<td>"+
+                                      "<a id=\"btnDeletar\" data-id='"+val[x]["id"]+"'>"+
+                                        "<i class=\"fas fa-times\"></i>"+
+                                      "</a>"+
+                                    "</td>"+
+                                  "</tr>");
+        }
+
+        $("#btnConsultar").css("display","");
+        $("#Pesquisa").css("display","");
+                                
       }
-    }).done(function(){
+    }).done(function(val){
       if(val["error"]){
         alert(val["message"]);
       }
       else{
-
+        alert("Dados atualizados");
       }
     }).fail(function(x, status, val){
       alert(val);

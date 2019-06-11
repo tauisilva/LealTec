@@ -149,14 +149,14 @@
         
         case 'Atualizar':
             try {
-                $idCliente = trim($_POST["idCLiente"]);
-                $cpf = trim($_POST[""]);
-                $nome = trim($_POST[""]);
-                $numero = trim($_POST[""]);
-                $endereco = trim($_POST[""]);
+                $idCliente = trim($_POST["idCliente"]);
+                $cpf = trim($_POST["cpf"]);
+                $nome = trim($_POST["nome"]);
+                $numero = trim($_POST["numero"]);
+                $endereco = trim($_POST["endereco"]);
 
                 $conn = new Conexao();
-                
+
                 $ids =  "SELECT P.nome AS nome, P.id_pessoa AS pessoa, T.id_tel AS telefone".
                         " FROM ".TABCLIENTE." C ".
                         " LEFT OUTER JOIN ".TABPESSOA." P ON C.pessoa = P.id_pessoa".
@@ -164,26 +164,32 @@
                         " WHERE C.id_cliente = '$idCliente'";
 
                 $strConsulta = $conn->Consultas($ids);
-                
                 $row = $strConsulta->fetch_Assoc();
-                                    
-                $strAtualizar = "UPDATE FROM ".TABCLIENTE.
-                                " SET endereco = '$endereco'".
-                                " WHERE = id_cliente = '$idCliente';";
-
-                $strAtualizar .= "UPDATE FROM ".TABPESSOA.
-                                " SET cpf = '$cpf', nome = '$nome'".
-                                " WHERE = id_pessoa = '".$row['pessoa']."';";
-
-                $strAtualizar .= "UPDATE FROM ".TABTELEFONE.
-                                " SET numero = '$numero'".
-                                " WHERE = id_tel = '".$row['telefone']."'";
-
-                $result = $conn->AtualizaMult($strAtualizar);
-
-                $result = $result->fetch_Assoc();
-
                 
+                $strAtualizar = "UPDATE ".TABCLIENTE.
+                                " SET endereco = '$endereco'".
+                                " WHERE id_cliente = '$idCliente';";
+                $conn->Atualiza($strAtualizar);
+                
+                $strAtualizar = "UPDATE ".TABPESSOA.
+                                " SET cpf = '$cpf', nome = '$nome'".
+                                " WHERE id_pessoa = '".$row['pessoa']."';";
+                $conn->Atualiza($strAtualizar);
+                
+                $strAtualizar = "UPDATE ".TABTELEFONE.
+                                " SET numero = '$numero'".
+                                " WHERE id_tel = '".$row['telefone']."';";
+                $conn->Atualiza($strAtualizar);
+                
+                $strConsulta =  "SELECT C.id_cliente AS id, P.cpf, P.nome, T.numero, C.endereco FROM cliente C".
+                                " LEFT OUTER JOIN Pessoa P ON C.pessoa = P.id_pessoa".
+                                " LEFT OUTER JOIN Telefone T ON P.numero = T.id_tel;";
+                
+                $pesq = $conn->Consultas($strConsulta);
+
+                $retRow = $pesq->fetch_All(MYSQLI_ASSOC);
+
+                echo json_encode($retRow);
 
             } catch (Exception $e) {
                 $ret = array("error" => true, "message" => $e->getMessage());
@@ -192,7 +198,6 @@
             }
             
             break;
-    
     }
 
 ?>

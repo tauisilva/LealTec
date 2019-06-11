@@ -50,19 +50,6 @@ class Conexao extends Exception{
         }
         
     }
-    function InsercaoMult($sql){
-        try{
-
-            $this->strConn->query($sql);
-            return true;
-
-        }catch(Exception $e){
-            
-            throw new Exception("Erro ao tentar realizar a consulta", 1);
-            
-        }
-        
-    }
     function Deletar($sql){
         try {
             
@@ -89,18 +76,6 @@ class Conexao extends Exception{
         try{
 
             return $this->strConn->query($sql);
-
-        }catch(Exception $e){
-            
-            throw new Exception("Erro ao tentar realizar a operação", 1);
-            
-        }
-    }
-    function AtualizaMult($sql){
-        try{
-
-            $this->strConn->query($sql);
-            return true;
 
         }catch(Exception $e){
             
