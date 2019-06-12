@@ -18,10 +18,13 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" data-toggle="modal" data-target="#modalSmartphones" style="border-radius: 30px;">Smartphone</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm" data-toggle="modal" data-target="#modalSmartphones" style="border-radius: 30px;">Smartphone</button>
             </div>
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modalTablets"style="border-radius: 30px;">Tablets</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm"  data-toggle="modal" data-target="#modalTablets"style="border-radius: 30px;">Tablets</button>
+            </div>
+            <div class="text-center mb-3 col-md-12" >
+              <button type="button" class="btn btn-outline-primary btn-rounded waves-effect btn-block z-depth-1 btn-sm text-white"  data-toggle="modal" data-target="#modalCadServicos"style="border-radius: 30px;">Novo Dispositivo</button>
             </div>
           </div>
         </div>
@@ -62,8 +65,8 @@
               <th>#</th>
               <th>Nome</th>
               <th>Preço</th>
-              <th>Apagar</th>
               <th>Descrição</th>
+              <th>Apagar</th>
             </tr>
           </thead>
           <tbody>
@@ -184,4 +187,4 @@
   </div>
 </div>
 <!-- Modal: Tablets -->
-<?php include("ordem.php");?>
+<?php include("ordem.php"); include("cadastro-servicos.php");?>

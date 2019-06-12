@@ -1,7 +1,7 @@
 <!-- Modal serviços -->
 <div class="modal fade" id="modalDesktop" tabindex="-1" role="dialog" aria-labelledby="modalDesktopLabel"
   aria-hidden="true" >
-  <div class="modal-dialog form-dark" role="document">
+  <div class="modal-dialog form-dark modal-dialog-scrollable" role="document">
     <!--Content-->
     <div class="modal-content card card-image" style="background-image: url('img/migamer.jpeg'); border-radius: 10px;">
       <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4" style="border-radius: 10px;">
@@ -18,10 +18,13 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1" data-toggle="modal" data-target="#modalComputador" style="border-radius: 30px;">Computador</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm" data-toggle="modal" data-target="#modalComputador" style="border-radius: 30px;">Computador</button>
             </div>
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modalNotebooks"style="border-radius: 30px;">Notebook</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm"  data-toggle="modal" data-target="#modalNotebooks"style="border-radius: 30px;">Notebook</button>
+            </div>
+            <div class="text-center mb-3 col-md-12" >
+              <button type="button" class="btn btn-outline-primary btn-rounded waves-effect btn-block z-depth-1 btn-sm text-white"  data-toggle="modal" data-target="#modalCadServicos"style="border-radius: 30px;">Novo Dispositivo</button>
             </div>
           </div>
         </div>
@@ -185,4 +188,4 @@
   </div>
 </div>
 <!-- Modal: Computador -->
-<?php include("ordem.php");?>
+<?php include("ordem.php"); include("cadastro-servicos.php");?>

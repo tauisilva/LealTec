@@ -18,13 +18,16 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1"  data-toggle="modal" data-target="#modaletc"style="border-radius: 30px;">Etc</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm"  data-toggle="modal" data-target="#modaletc"style="border-radius: 30px;">Etc</button>
+            </div>
+            <div class="text-center mb-3 col-md-12" >
+              <button type="button" class="btn btn-outline-primary btn-rounded waves-effect btn-block z-depth-1 btn-sm text-white"  data-toggle="modal" data-target="#modalCadServicos"style="border-radius: 30px;" data-dismiss="modal">Novo Dispositivo</button>
             </div>
           </div>
         </div>
         <div class="modal-footer">
         <button type="button"class="btn btn-outline-danger waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal">Close</button>
-        <button class="btn btn-outline-success waves-effect z-depth-1 btn-sm" style="border-radius: 40px;" data-toggle="modal" data-target="#modalOrdem" data-dismiss="modal">Novo Serviço</button>
+        <button class="btn btn-outline-success waves-effect z-depth-1 btn-sm" style="border-radius: 40px;" data-toggle="modal" data-target="#modalOrdem" data-dismiss="modal" data-dismiss="modal">Novo Serviço</button>
       </div>
       </div>
     </div>
@@ -32,7 +35,6 @@
   </div>
 </div>
 <!-- Modal mobiles-->
-<?php include("ordem.php");?>
 <div class="modal fade" id="modaletc" tabindex="-1" role="dialog" aria-labelledby="modaletcLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
@@ -103,3 +105,4 @@
     </div>
   </div>
 </div>
+<?php include("ordem.php"); include("cadastro-servicos.php");?>
