@@ -258,10 +258,15 @@ values (default, '2'),
 (default, '5');
 
 insert into Mobile values
-(default, '1', 'J7 Prime', 'aquele carregador', '250 polegadas'),
-(default, '5', 'Galaxy Tab A', 'aquele carregador de tablet', '500 polegadas'),
-(default,'2', 'Galaxy Tab B', 'aquele carregador de tablet 2', '1000 polegadas'),
-(default,'4', 'J2', 'aquele carregador 2', '200 polegadas');
+(default, '1', 'J7 Prime', 'Tipo V8', '250 polegadas'),
+(default, '22', 'Galaxy Tab A', 'Tipo C', '42 polegadas'),
+(default,'22', 'Galaxy Tab B', 'Tipo V3', '36 polegadas'),
+(default, '22', 'Galaxy Tab E', 'Tipo C', '32 polegadas'),
+(default,'2', 'IPAD', 'Tipo V3', '11 polegadas'),
+(default, '23', 'SONY', 'Tipo C', '14 polegadas'),
+(default,'15', 'MOTOROLA', 'Tipo V3', '22 polegadas'),
+(default, '2', 'IPAD MINI', 'Tipo C', '65 polegadas'),
+(default,'4', 'J2', 'Tipo C', '200 polegadas');
 
 insert into Celular values
 ('1', '789465132','do J7'),
@@ -269,12 +274,17 @@ insert into Celular values
 
 insert into Tablet values
 ('2', '0.5'),
-('3','1.0');
+('3','7.0'),
+('4','6.0'),
+('5','7.5'),
+('6','8.2'),
+('7','11.0'),
+('8','10.0');
 
 insert into Desktop values
 (default, '9', 'HP AlfaNumerico', 'TPN-1854', 'Core I5', '6GB DDR3L', '120SSD/500HD', 'Windows 10', '600Real Corsair 80Plus Gold'),
-(default, '12', ' Alfa ABNT', 'Lenovo G400', 'Core I3', '8GB DDR4', '240SSD', 'Windows 10', '400Real Doctor Rank'),
+(default, '12', ' Alfa ABNT', 'Lenovo G400', 'Core I3', '8GB DDR4', '240SSD', 'Windows 10', '400Real Doctor Rank');
 
 insert into Notebook values
 (default, '1', 'AlfaNumerico', 'Aspire A515', 'Core I5', '8GB DDR4', '1TB HD', 'Windows 10', '19Volts', 'Acer 4Celulas'),
-(default, '4', 'Alfa', 'Asus X51u', 'Core 2 duO', '3GB DDR2', '320 HD', 'Windows 7', '19Volts', 'Asus 2Celulas'),
+(default, '4', 'Alfa', 'Asus X51u', 'Core 2 duO', '3GB DDR2', '320 HD', 'Windows 7', '19Volts', 'Asus 2Celulas');
