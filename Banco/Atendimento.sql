@@ -278,13 +278,13 @@ insert into Tablet values
 ('4','6.0'),
 ('5','7.5'),
 ('6','8.2'),
-('7','11.0'),
-('8','10.0');
+('7','1.1'),
+('8','1.0');
+
+insert into computador values
+(default, '9','HP AlfaNumerico','TPN-1854', 'Core I5', '6GB DDR3L', '120SSD/500HD', 'Windows 10'),
+(default, '12', ' Alfa ABNT', 'Lenovo G400', 'Core I3', '8GB DDR4', '240SSD', 'Windows 10');
 
 insert into Desktop values
-(default, '9', 'HP AlfaNumerico', 'TPN-1854', 'Core I5', '6GB DDR3L', '120SSD/500HD', 'Windows 10', '600Real Corsair 80Plus Gold'),
-(default, '12', ' Alfa ABNT', 'Lenovo G400', 'Core I3', '8GB DDR4', '240SSD', 'Windows 10', '400Real Doctor Rank');
-
-insert into Notebook values
-(default, '1', 'AlfaNumerico', 'Aspire A515', 'Core I5', '8GB DDR4', '1TB HD', 'Windows 10', '19Volts', 'Acer 4Celulas'),
-(default, '4', 'Alfa', 'Asus X51u', 'Core 2 duO', '3GB DDR2', '320 HD', 'Windows 7', '19Volts', 'Asus 2Celulas');
+('600Real Corsair 80Plus Gold', '1'),
+('400Real Doctor Rank', '2');
