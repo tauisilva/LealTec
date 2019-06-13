@@ -107,8 +107,8 @@
 
   $("#btnConsultar").click(function(){
     $.ajax({
-      type: "POST",
       url: "<?= PROC ?>",
+      type: "POST",
       dataType: "json",
       cache: false,
       data: {
