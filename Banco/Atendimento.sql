@@ -270,3 +270,11 @@ insert into Celular values
 insert into Tablet values
 ('2', '0.5'),
 ('3','1.0');
+
+insert into Desktop values
+(default, '9', 'HP AlfaNumerico', 'TPN-1854', 'Core I5', '6GB DDR3L', '120SSD/500HD', 'Windows 10', '600Real Corsair 80Plus Gold'),
+(default, '12', ' Alfa ABNT', 'Lenovo G400', 'Core I3', '8GB DDR4', '240SSD', 'Windows 10', '400Real Doctor Rank'),
+
+insert into Notebook values
+(default, '1', 'AlfaNumerico', 'Aspire A515', 'Core I5', '8GB DDR4', '1TB HD', 'Windows 10', '19Volts', 'Acer 4Celulas'),
+(default, '4', 'Alfa', 'Asus X51u', 'Core 2 duO', '3GB DDR2', '320 HD', 'Windows 7', '19Volts', 'Asus 2Celulas'),
