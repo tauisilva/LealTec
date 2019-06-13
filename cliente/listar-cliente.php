@@ -41,9 +41,14 @@
             <label for="strConsulta"></label>&nbsp;
           </td>
           <td>
-          <div class="md-form mt-0 ">
-            <input type="text" id="strConsulta" size="100%" class="form-control" placeholder="Procurar Cliente" aria-label="Procurar Cliente">
-          </div>
+          <div class="form-row">
+            <div class="md-form mt-0 col-md-10">
+              <input type="text" id="strConsulta" size="100%" class="form-control" placeholder="Procurar Cliente" aria-label="Procurar Cliente">
+            </div>
+            <div class="col-md-2">
+              <button type="button" id="btnConsultar" class="btn btn-outline-primary btn-sm waves-effect btn-sm" style="border-radius: 40px;">Consultar</button>
+            </div>
+          </div> 
           </td>
         </tr>
       </table>
@@ -86,8 +91,7 @@
       </div>
       <!--Footer-->
       <div class="modal-footer">
-      <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" id="btnVoltar">voltar</button>
-        <button type="button" id="btnConsultar" class="btn btn-outline-primary btn-sm waves-effect" style="border-radius: 40px;">Consultar</button>
+        <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" id="btnVoltar">voltar</button>
       </div>
     </div>
   </div>

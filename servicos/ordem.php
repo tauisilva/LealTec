@@ -61,20 +61,6 @@ aria-hidden="true">
         <label class="custom-control-label" for="defaultDispositivo">Cadastrar Dispositivo?</label>
       </div>
 
-      <!--for all-->
-      <div class="form-row">
-        <div class="md-form col-md-6">
-          <input type="text" id="Form-modelo" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-modelo">Modelo</label>
-        </div>
-        <!--ID for all dispotivos and IMEI for Mobiles(Smartphones)-->
-        <div class="md-form col-md-6">
-          <input type="email" id="Form-imei-id" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-imei-id">ID/IMEI</label>
-        </div>
-      </div>
-      <!--for all-->
-
       <!--For select-->
       <div class="form-row">
         <div class="input-group mb-3 col-md-6" >
@@ -101,6 +87,20 @@ aria-hidden="true">
         </div>
       </div>
        <!--For select-->
+
+       <!--for all-->
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-modelo" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-modelo">Modelo</label>
+        </div>
+        <!--ID for all dispotivos and IMEI for Mobiles(Smartphones)-->
+        <div class="md-form col-md-6">
+          <input type="email" id="Form-imei-id" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-imei-id">ID/IMEI</label>
+        </div>
+      </div>
+      <!--for all-->
 
       <!--All Mobile-->
       <div class="form-row">
