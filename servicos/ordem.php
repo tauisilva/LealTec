@@ -14,6 +14,7 @@ aria-hidden="true">
     <!--Body-->
     <div class="modal-body mx-4">
       <!--Body-->
+      <div class="text-center">
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input" id="defaultCelular" name="inlineDefaultRadiosExample">
         <label class="custom-control-label" for="defaultCelular">Celular</label>
@@ -33,6 +34,7 @@ aria-hidden="true">
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input" id="defaultOutros" name="inlineDefaultRadiosExample">
         <label class="custom-control-label" for="defaultOutros">Outros</label>
+      </div>
       </div>
       <div class="form-row">
         <div class="md-form col-md-6">
@@ -54,19 +56,104 @@ aria-hidden="true">
           <label data-error="wrong" data-success="right" for="Form-func">Funcionario</label>
         </div>
       </div>
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="defaultDispositivo" name="inlineDefaultRadiosExample">
+        <label class="custom-control-label" for="defaultDispositivo">Cadastrar Dispositivo?</label>
+      </div>
+
+      <!--for all-->
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-modelo" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-modelo">Modelo</label>
+        </div>
+        <!--ID for all dispotivos and IMEI for Mobiles(Smartphones)-->
+        <div class="md-form col-md-6">
+          <input type="email" id="Form-imei-id" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-imei-id">ID/IMEI</label>
+        </div>
+      </div>
+      <!--for all-->
+
+      <!--All Mobile-->
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-tel" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-tel">Tela</label>
+        </div>
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-func" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-func">Tipo Carregador</label>
+        </div>
+      </div>
+       <!--All Mobile-->
+
+      <!--For All Computadores-->
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-tel" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-tel">Tipo de Tela</label>
+        </div>
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-func" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-func">Teclado</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-tel" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-tel">Processador</label>
+        </div>
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-func" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-func">RAM</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-tel" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-tel">HD</label>
+        </div>
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-func" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-func">Sistema Operacional</label>
+        </div>
+      </div>
+      <!--For All Computadores-->
+
+      <!--For Notebook-->
       <div class="form-row">
         <div class="md-form col-md-6">
           <input type="text" id="Form-val" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-val">R$</label>
+          <label data-error="wrong" data-success="right" for="Form-val">Fonte Notebook</label>
         </div>
         <div class="md-form col-md-6">
           <input type="text" id="Form-disp" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-disp">Dispositivo</label>
+          <label data-error="wrong" data-success="right" for="Form-disp">Bateria</label>
         </div>
       </div>
+      <!--For NOtebook-->
+
+      <!--For Desktop-->
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-val" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-val">Fonte</label>
+        </div>
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-disp" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-disp"></label>
+        </div>
+      </div>
+      <!--For Desktop-->
+
       <div class="md-form">
         <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
         <label for="materialContactFormMessage">Descrição</label>
+      </div>
+      <div class="md-form">
+        <input type="text" id="Form-val" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-val">R$</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
         <input type="radio" class="custom-control-input" id="defaultemail" name="inlineDefaultRadiosExample">

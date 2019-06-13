@@ -187,4 +187,4 @@
   </div>
 </div>
 <!-- Modal: Tablets -->
-<?php include("ordem.php"); include("cadastro-servicos.php");?>
+<?php include("ordem.php");?>

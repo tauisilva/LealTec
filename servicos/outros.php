@@ -105,4 +105,4 @@
     </div>
   </div>
 </div>
-<?php include("ordem.php"); include("cadastro-servicos.php");?>
+<?php include("ordem.php");?>
