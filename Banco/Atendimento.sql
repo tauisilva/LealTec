@@ -256,3 +256,17 @@ values (default, '2'),
 (default, '3'),
 (default, '4'),
 (default, '5');
+
+insert into Mobile values
+(default, '1', 'J7 Prime', 'aquele carregador', '250 polegadas'),
+(default, '5', 'Galaxy Tab A', 'aquele carregador de tablet', '500 polegadas'),
+(default,'2', 'Galaxy Tab B', 'aquele carregador de tablet 2', '1000 polegadas'),
+(default,'4', 'J2', 'aquele carregador 2', '200 polegadas');
+
+insert into Celular values
+('1', '789465132','do J7'),
+('4', '789648624','Do J2');
+
+insert into Tablet values
+('2', '0.5'),
+('3','1.0');
