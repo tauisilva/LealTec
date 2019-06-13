@@ -20,9 +20,6 @@
             <div class="text-center mb-3 col-md-12" >
               <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm"  data-toggle="modal" data-target="#modaletc"style="border-radius: 30px;">Etc</button>
             </div>
-            <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-primary btn-rounded waves-effect btn-block z-depth-1 btn-sm text-white"  data-toggle="modal" data-target="#modalCadServicos"style="border-radius: 30px;" data-dismiss="modal">Novo Dispositivo</button>
-            </div>
           </div>
         </div>
         <div class="modal-footer">
