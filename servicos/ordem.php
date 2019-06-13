@@ -65,17 +65,6 @@ aria-hidden="true">
       <div class="form-row">
         <div class="input-group mb-3 col-md-6" >
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupMarca" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">Marca</label>
-          </div>
-          <select class="custom-select" id="inputGroupMarca" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div class="input-group mb-3 col-md-6" >
-          <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupDispositivo" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">Dispositivo</label>
           </div>
           <select class="custom-select" id="inputGroupDispositivo" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
@@ -169,6 +158,18 @@ aria-hidden="true">
         </div>
       </div>
       <!--For Desktop-->
+
+        <div class="input-group mb-3 col-md-6" >
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupMarca" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">Marca</label>
+          </div>
+          <select class="custom-select" id="inputGroupMarca" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
 
       <div class="md-form">
         <textarea id="materialContactFormMessage" class="form-control md-textarea" rows="3"></textarea>
