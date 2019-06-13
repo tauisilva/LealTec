@@ -75,6 +75,33 @@ aria-hidden="true">
       </div>
       <!--for all-->
 
+      <!--For select-->
+      <div class="form-row">
+        <div class="input-group mb-3 col-md-6" >
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupMarca" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">Marca</label>
+          </div>
+          <select class="custom-select" id="inputGroupMarca" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="input-group mb-3 col-md-6" >
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupDispositivo" style="border-top-left-radius: 20px; border-bottom-left-radius: 20px;">Dispositivo</label>
+          </div>
+          <select class="custom-select" id="inputGroupDispositivo" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+       <!--For select-->
+
       <!--All Mobile-->
       <div class="form-row">
         <div class="md-form col-md-6">
@@ -82,8 +109,8 @@ aria-hidden="true">
           <label data-error="wrong" data-success="right" for="Form-tel">Tela</label>
         </div>
         <div class="md-form col-md-6">
-          <input type="text" id="Form-func" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-func">Tipo Carregador</label>
+          <input type="text" id="Form-CarregadorMobile" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-CarregadorMobile">Tipo Carregador</label>
         </div>
       </div>
        <!--All Mobile-->
@@ -91,32 +118,32 @@ aria-hidden="true">
       <!--For All Computadores-->
       <div class="form-row">
         <div class="md-form col-md-6">
-          <input type="text" id="Form-tel" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-tel">Tipo de Tela</label>
+          <input type="text" id="Form-tela" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-tela">Tipo de Tela</label>
         </div>
         <div class="md-form col-md-6">
-          <input type="text" id="Form-func" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-func">Teclado</label>
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="md-form col-md-6">
-          <input type="text" id="Form-tel" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-tel">Processador</label>
-        </div>
-        <div class="md-form col-md-6">
-          <input type="text" id="Form-func" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-func">RAM</label>
+          <input type="text" id="Form-teclado" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-teclado">Teclado</label>
         </div>
       </div>
       <div class="form-row">
         <div class="md-form col-md-6">
-          <input type="text" id="Form-tel" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-tel">HD</label>
+          <input type="text" id="Form-cpu" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-cpu">Processador</label>
         </div>
         <div class="md-form col-md-6">
-          <input type="text" id="Form-func" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-func">Sistema Operacional</label>
+          <input type="text" id="Form-ram" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-ram">RAM</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-hd" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-hd">HD</label>
+        </div>
+        <div class="md-form col-md-6">
+          <input type="text" id="Form-os" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-os">Sistema Operacional</label>
         </div>
       </div>
       <!--For All Computadores-->
@@ -124,12 +151,12 @@ aria-hidden="true">
       <!--For Notebook-->
       <div class="form-row">
         <div class="md-form col-md-6">
-          <input type="text" id="Form-val" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-val">Fonte Notebook</label>
+          <input type="text" id="Form-fontNotebbok" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-fontNotebbok">Fonte Notebook</label>
         </div>
         <div class="md-form col-md-6">
-          <input type="text" id="Form-disp" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-disp">Bateria</label>
+          <input type="text" id="Form-bateria" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-bateria">Bateria</label>
         </div>
       </div>
       <!--For NOtebook-->
@@ -137,12 +164,8 @@ aria-hidden="true">
       <!--For Desktop-->
       <div class="form-row">
         <div class="md-form col-md-6">
-          <input type="text" id="Form-val" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-val">Fonte</label>
-        </div>
-        <div class="md-form col-md-6">
-          <input type="text" id="Form-disp" class="form-control validate">
-          <label data-error="wrong" data-success="right" for="Form-disp"></label>
+          <input type="text" id="Form-FontPc" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="Form-FontPc">Fonte</label>
         </div>
       </div>
       <!--For Desktop-->
