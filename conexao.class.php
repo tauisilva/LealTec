@@ -23,7 +23,6 @@ class Conexao extends Exception{
             
         }
     }
-
     
     function Consultas($sql){
         try{

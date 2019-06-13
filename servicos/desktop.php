@@ -18,16 +18,16 @@
           <!--Body-->
           <div class="row d-flex align-items-center mb-4">
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm" data-toggle="modal" data-target="#modalComputador" style="border-radius: 30px;">Computador</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm" data-toggle="modal" onclick="btnComputador();" style="border-radius: 30px;">Computador</button>
             </div>
             <div class="text-center mb-3 col-md-12" >
-              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm"  data-toggle="modal" data-target="#modalNotebooks"style="border-radius: 30px;">Notebook</button>
+              <button type="button" class="btn btn-outline-success btn-rounded waves-effect btn-block z-depth-1 btn-sm"  data-toggle="modal" onclick="btnNotebook();" style="border-radius: 30px;">Notebook</button>
             </div>
           </div>
         </div>
         <div class="modal-footer">
         <button type="button"class="btn btn-outline-danger waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal">Close</button>
-        <button class="btn btn-outline-success waves-effect z-depth-1 btn-sm" style="border-radius: 40px;" data-toggle="modal" data-target="#modalOrdem" data-dismiss="modal">Novo Serviço</button>
+        <button class="btn btn-outline-success waves-effect z-depth-1 btn-sm" style="border-radius: 40px;" data-toggle="modal" onclick="ordemServico()" data-dismiss="modal">Novo Serviço</button>
       </div>
       </div>
     </div>
@@ -35,154 +35,41 @@
   </div>
 </div>
 <!-- Modal serviços-->
-<!--------------------------------------------------------------------------------------------------------------------- Modal Notebooks -------------------------------------------------------------------------------------------------------->
-<!-- Modal: Notebooks -->
-<div class="modal fade" id="modalNotebooks" tabindex="-1" role="dialog" aria-labelledby="modalNotebooksLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content" style="border-radius: 10px;">
-      <!--Header-->
-      <div class="modal-header" style=" border-top-right-radius:  10px; border-top-left-radius: 10px;">
-        <h4 class="modal-title" id="myModalNotebooks">Notebooks</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="container-fluid">
-        <div class="md-form mt-0 ">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-      </div>
-      </div>
-      <!--Body-->
-      <div class="modal-body">
 
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Marca</th>
-              <th>RAM</th>
-              <th>Valor</th>
-              <th>Deletar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Positivo</td>
-              <td>8GB DDR3L</td>
-              <td>R$100,00</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Product 2</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Product 3</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Product 4</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr class="total">
-              <th scope="row">5</th>
-              <td>Total</td>
-              <td>400$</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+<script>
+  
+  function btnComputador(){
+    $.ajax({
+      url: "servicos/desktop/computador.php",
+      type: "POST",
+      success: function(data){
+        $("#modalDesktop").html(data);
+        $("#modalComputador").modal("show");
+      }
+    });
+  }
 
-      </div>
-      <!--Footer-->
-      <div class="modal-footer">
-        <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal" data-target="#modalServicos">voltar</button>
-        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Procurar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal: Notebooks -->
-<!--------------------------------------------------------------------------------------------------------------------- Modal Computador -------------------------------------------------------------------------------------------------------->
-<!-- Modal: Computador -->
-<div class="modal fade" id="modalComputador" tabindex="-1" role="dialog" aria-labelledby="modalComputadorLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
-    <div class="modal-content" style="border-radius: 10px;">
-      <!--Header-->
-      <div class="modal-header" style="border-top-right-radius:  10px; border-top-left-radius: 10px;">
-        <h4 class="modal-title" id="myModalComputador">Computador</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="container-fluid">
-        <div class="md-form mt-0 ">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-      </div>
-      </div>
-      <!--Body-->
-      <div class="modal-body">
+  function btnNotebook(){
+    $.ajax({
+      url: "servicos/desktop/notebook.php",
+      type: "POST",
+      success: function(data){
+        $("#modalDesktop").html(data);
+        $("#modalNotebooks").modal("show");
+      }
+    });
+  }
+  
+  function ordemServico(){
+    $.ajax({
+      url: "servicos/ordem.php",
+      type: "POST",
+      
+      success: function(data){
+        $("#modalDesktop").html(data);
+        $("#modalOrdem").modal("show");
+      }
+    });
+  }
 
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Product name</th>
-              <th>Price</th>
-              <th>Remove</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Product 1</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Product 2</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Product 3</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Product 4</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr class="total">
-              <th scope="row">5</th>
-              <td>Total</td>
-              <td>400$</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-
-      </div>
-      <!--Footer-->
-      <div class="modal-footer">
-        <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal" data-target="#modalServicos">voltar</button>
-        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Procurar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal: Computador -->
-<?php include("ordem.php");?>
+</script>

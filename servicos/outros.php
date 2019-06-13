@@ -44,8 +44,13 @@
         </button>
       </div>
       <div class="container-fluid">
-        <div class="md-form mt-0 ">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+      <div class="form-row">
+        <div class="md-form mt-0 col-md-10">
+          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-outline-primary waves-effect btn-sm" id="btnConsultar" style="border-radius: 40px;">Procurar</button>
+        </div>
       </div>
       </div>
       <!--Body-->
@@ -97,9 +102,7 @@
       <!--Footer-->
       <div class="modal-footer">
         <button type="button"class="btn btn-outline-secondary waves-effect btn-sm" style="border-radius: 40px;" data-dismiss="modal" data-target="#modalOutros">voltar</button>
-        <button class="btn btn-outline-primary waves-effect btn-sm" style="border-radius: 40px;">Procurar</button>
       </div>
     </div>
   </div>
 </div>
-<?php include("ordem.php");?>
