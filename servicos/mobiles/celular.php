@@ -101,4 +101,84 @@
         location.reload();
     });
 
+    $("#btnConsultar").click(function(){
+      $.ajax({
+        url: "<?= PROC ?>",
+        type: "POST",
+        dataType: "json",
+        cache: false,
+        data: {
+          
+          acao: "Consultar",
+          consulta: $("#strConsulta").val(),
+          tabela: "Tablet"
+
+        },
+        success: function(val) {
+          $("#Resultado").html("");
+          
+          var count = 1;
+
+          for(x in val){
+            $("#Resultado").append("<tr>"+
+                                      "<th scope=\"row\">"+(count++)+"</th>"+
+                                      "<td>"+val[x]["nome"]+"</td>"+
+                                      "<td>"+val[x]["marca"]+"</td>"+
+                                      "<td>"val[x]["carregador"]"</td>"
+                                      "<td>"+val[x]["tela"]+"</td>"+
+                                      "<td>"+val[x]["pelicula"]+"</td>"+
+                                      "<td>"+
+                                        "<a id=\"btnEditar\" data-id='"val[x]["id"]"'>"+
+                                          "<i class=\"far fa-edit\"></i>"+
+                                        "</a>"+
+                                      "</td>"+
+                                      "<td>"+
+                                        "<a id=\"btnDeletar\" data-id='"+val[x]["id"]+"'>"+
+                                          "<i class=\"fas fa-times\"></i>"+
+                                        "</a>"+
+                                      "</td>"+
+                                    "</tr>");
+          }
+                                  
+        }
+      
+    });
+    
+  });
+
+  $("body").delegate("a[id='btnDeletar']", "click", function(){
+
+    var ret = confirm("Deseja realmente excluir esse computador?");
+
+    if(ret){
+
+      var btnDeletar = $(this);
+
+      $.ajax({
+
+        url: "<?= PROC ?>",
+        type: "POST",
+
+        data:{
+
+          acao: "Deletar",
+          idDeletar: $(this).attr("data-id"),
+          tabela: "Celular"
+          
+        }
+      }).done(function(val){
+        if(val["error"]){
+          alert(val["message"]);
+        }
+        else{
+          btnDeletar.parent().parent().remove();
+        }
+      }).fail(function(x, status, val){
+        alert(val);
+      });
+
+    }
+
+  });
+
 </script>

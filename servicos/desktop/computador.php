@@ -1,19 +1,20 @@
 <?php
 
     session_start();
-    require_once("../conexao.class.php");
+    require_once("../../conexao.class.php");
 
     try {
         
         $conn = new Conexao();
 
-        $strQuery = "";
+        $strQuery = "SELECT * FROM Desktop D".
+                    " LEFT OUTER JOIN Computador C ON D.computador = C.id_Comp";
 
         $res = $conn->Consultas($strQuery);
 
         $count = 1;
 
-        define("PROC", "servicos/desktop/acoesDesk.php");
+        define("PROC", "servicos/mobiles/acoesMobil.php");
 
     } catch (Exception $e) {
 
@@ -50,42 +51,41 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Product name</th>
-              <th>Price</th>
-              <th>Remove</th>
+              <th>Nome</th>
+              <th>Marca</th>
+              <th>Teclado</th>
+              <th>Processador</th>
+              <th>Ram</th>
+              <th>HD</th>
+              <th>SO</th>
+              <th>Fonte</th>
+              <th colspan="2">Ações</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Product 1</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Product 2</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Product 3</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-              <td>Product 4</td>
-              <td>100$</td>
-              <td><a><i class="fas fa-times"></i></a></td>
-            </tr>
-            <tr class="total">
-              <th scope="row">5</th>
-              <td>Total</td>
-              <td>400$</td>
-              <td></td>
-            </tr>
+            <?php while($row = $res->fetch_Assoc()):?>
+              <tr>
+                <th scope="row"><?=$count++?></th>
+                <td><?= trim($row["nome"]) ?></td>
+                <td><?= trim($row["marca"]) ?></td>
+                <td><?= trim($row["teclado"]) ?></td>
+                <td><?= trim($row["processador"]) ?></td>
+                <td><?= trim($row["ram"]) ?></td>
+                <td><?= trim($row["hd"]) ?></td>
+                <td><?= trim($row["so"]) ?></td>
+                <td><?= trim($row["fonte"]) ?></td>
+                <td>
+                  <a id="btnEditar" data-id=<?= $row["id_Comp"]?>>
+                    <i class="far fa-edit"></i>
+                  </a>
+                </td>
+                <td>
+                  <a id="btnDeletar" data-id=<?= $row["id_Comp"]?>>
+                    <i class="fas fa-times"></i>
+                  </a>
+                </td>
+              </tr>
+            <?php endwhile; ?>
           </tbody>
         </table>
 
